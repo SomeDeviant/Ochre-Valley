@@ -131,7 +131,7 @@
 
 	log_game("The round has ended.")
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale on Azure Peak.</span>")
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale in Ochre Valley.</span>") // OV Edit
 	//Caustic edit
 	// get_end_reason()
 	//Caustic edit end
