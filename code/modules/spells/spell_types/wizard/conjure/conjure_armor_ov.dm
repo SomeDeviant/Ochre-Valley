@@ -9,8 +9,8 @@
 		to_chat(user, span_warning("I don't have any usable hands!"))
 		revert_cast()
 		return FALSE
-	if(src.conjured_armor)
-		qdel(src.conjured_armor)
+	if(conjured_armor)
+		qdel(conjured_armor)
 	switch(checkspot)
 		if("ring")
 			if(user.get_num_arms() <= 0)
@@ -36,7 +36,7 @@
 	return TRUE
 
 /obj/effect/proc_holder/spell/self/conjure_armor/Destroy()
-	if(src.conjured_armor)
+	if(conjured_armor)
 		conjured_armor.visible_message(span_warning("[conjured_armor]'s borders begin to shimmer and fade, before it vanishes entirely!"))
 		qdel(conjured_armor)
 	return ..()
