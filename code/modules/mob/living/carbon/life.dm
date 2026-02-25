@@ -57,6 +57,12 @@
 /mob/living/carbon/handle_random_events()//BP/WOUND BASED PAIN
 	if(HAS_TRAIT(src, TRAIT_NOPAIN))
 		return
+	if(isbelly(loc))
+		if(!digest_pain)
+			return
+		var/obj/belly/their_belly = loc
+		if(their_belly.mode_flags & DM_FLAG_NUMBING)
+			return
 	if(!stat)
 		var/painpercent = get_complex_pain() / pain_threshold
 		painpercent = painpercent * 100
