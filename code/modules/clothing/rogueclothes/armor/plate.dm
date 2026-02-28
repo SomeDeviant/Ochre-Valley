@@ -388,7 +388,7 @@
 // OV edit start
 /obj/item/clothing/suit/roguetown/armor/plate/full/matthios/Initialize()
 	. = ..()
-	AddComponent(/datum/component/cursed_item, TRAIT_COMMIE, "ARMOR")
+	AddComponent(/datum/component/cursed_item, TRAIT_FREEMAN, "ARMOR")
 // OV edit end
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/zizo
