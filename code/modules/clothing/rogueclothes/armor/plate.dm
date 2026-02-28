@@ -155,7 +155,6 @@
 				user.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 				to_chat(user, span_notice("Arcyne lightning crackles across the cuirass, enchanting your mind with forbidden knowledge!"))
 			else
-				user.change_stat("intelligence", 3)
 				legendaryarcane = TRUE
 				to_chat(user, span_warning("Arcyne lightning crackles across the cuirass, enshrining your mastery over magicka!"))
 			user.change_stat(STATKEY_INT, 3)
