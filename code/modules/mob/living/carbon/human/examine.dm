@@ -93,7 +93,7 @@
 			displayed_headshot = src.vampire_headshot_link
 		else if (lichplayer && !isnull(src.lich_headshot_link))//Lich with a valid headshot
 			displayed_headshot = src.lich_headshot_link
-		else if (werewolfplayer /*&& werewolfplayer.transformed*/ && !isnull(src.werewolf_headshot_link)) //Werewolf with a valid headshot && transformed // OC Add ELSE IF WEREWOLF
+		else if (werewolfplayer && (werewolfplayer.transformed || istype(src, /mob/living/carbon/human/species/werewolf)) && !isnull(src.werewolf_headshot_link)) //Werewolf with a valid headshot && transformed // OC Add ELSE IF WEREWOLF
 			displayed_headshot = src.werewolf_headshot_link
 		else
 			displayed_headshot = src.headshot_link
@@ -160,7 +160,7 @@
 				. += span_notice("Something about them seems... predatory.")
 // Caustic Edit End
 // OV Edit Start
-		if(werewolfplayer /*&& werewolfplayer.transformed*/)
+		if(werewolfplayer && (werewolfplayer.transformed || istype(src, /mob/living/carbon/human/species/werewolf)))
 			if(werewolfplayer.wolfdesc_cached && length(werewolfplayer.wolfdesc_cached))
 				// . += span_details("Werewolf RP Description",werewolfplayer.wolfdesc_cached) // The #define is in 'modular_causticcove/__DEFINES/slop.dm' but its not loaded here! Will use a temp proc until then.
 				. += examine_span_details(span_info("Werewolf Description"),span_info(werewolfplayer.wolfdesc_cached))
