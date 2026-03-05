@@ -1027,7 +1027,7 @@
 
 	// If digested prey is also a pred... anyone inside their bellies gets moved up.
 	if(is_vore_predator(M))
-		M.release_vore_contents(include_absorbed = TRUE, silent = TRUE)
+		SSinventory_return.preserve_or_eject_belly_contents(M)	//OV EDIT - Preserve any unaccounted for belly contents before releasing things
 
 	//Drop all items into the belly.
 	//if(CONFIG_GET(flag/items_survive_digestion))

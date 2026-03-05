@@ -31,11 +31,15 @@ SUBSYSTEM_DEF(inventory_return)
 
 	return TRUE
 
-/datum/controller/subsystem/inventory_return/proc/preserve_object(var/obj/item/I)
-	if(!catalogue_object(I))
+/datum/controller/subsystem/inventory_return/proc/preserve_object(var/obj/item/I,var/mob/living/L)
+	if(!catalogue_object(I,L))
 		return FALSE
-	if(isliving(I.loc))
-		var/mob/living/L = I.loc
+	if(!L)
+		if(isliving(I.loc))
+			L = I.loc
+	if(isbelly(I.loc))
+		I.forceMove(get_turf(I.loc))
+	else if(L)
 		L.dropItemToGround(I,force = TRUE)	//Unequip it just to be sure
 	mob_check(I)	//Check to make sure there's no mobs hidden inside of it, we're about to send it to nullspace, so we want to make extra super sure
 	I.moveToNullspace()
@@ -93,24 +97,22 @@ SUBSYSTEM_DEF(inventory_return)
 		return FALSE
 	if(!isturf(dispense_loc))
 		dispense_loc = get_turf(dispense_loc)
-	var/msg = "\The [L] retrieves "
-	for(var/obj/item/I in ourlist)
+	var/msg = ""
+	var/not_first = FALSE
+	for(var/obj/item/I in ourlist)	
+		master_inv -= I	//Unregister everything first, since we want to do that no matter what!
+		sorted_inv[to_dispense] -= I
+		UnregisterSignal(I,COMSIG_PARENT_QDELETING)
 		if(I.loc)
 			if(!isbelly(I.loc))	//If we're tracking it and it's not in a belly then someone may be using it or looking at it, so if it isn't in nullspace or in a belly we will assume someone wanted to hold on to it.
 				continue
 		I.forceMove(dispense_loc)
-		master_inv -= I
-		sorted_inv[to_dispense] -= I
-		UnregisterSignal(I,COMSIG_PARENT_QDELETING)
-		if(ourlist.len > 0)
-			msg += "[I.name], "
-		else
-			if(source)
-				msg += "and [I.name] from \the [source]."
-			else
-				msg += "and [I.name]."
+		if(not_first)
+			msg += ", "
+		msg += "[I.name]"
+		not_first = TRUE
 
-	dispense_loc.visible_message(span_notice(msg),runechat_message = "clunk")
+	L.visible_message(span_notice("\The [L] retrieves their things from \the [source]."),span_notice("You retrieve your things from \the [source]. ([msg])"),runechat_message = "clunk")
 	sorted_inv -= to_dispense
 	return TRUE
 
@@ -156,6 +158,23 @@ SUBSYSTEM_DEF(inventory_return)
 			else
 				catalogue_object(H.beltl)
 
+/datum/controller/subsystem/inventory_return/proc/preserve_or_eject_belly_contents(var/mob/living/L)
+	var/should_preserve = TRUE
+	if(isbelly(L.loc))
+		var/obj/belly/predbelly = L.loc
+		if(predbelly.mode_flags & DM_FLAG_STRIP_DIGEST)
+			if(L.client?.prefs_vr.strip_pref)
+				should_preserve = FALSE
+	for(var/obj/belly/B in L.vore_organs)
+		for(var/thing in B)
+			if(isitem(thing))
+				if(should_preserve)
+					preserve_object(thing,L)	//Preserve what can be preserved
+				else
+					catalogue_object(thing,L)
+	
+	L.release_vore_contents(include_absorbed = TRUE, silent = TRUE)	//Release what can't!
+
 /////////////
 
 /proc/find_belly_or_turf(var/atom/movable/AM)
@@ -176,10 +195,8 @@ SUBSYSTEM_DEF(inventory_return)
 	last_login_key = key	//Because it is possible to become other mobs and things which clears your key, ckey, and client. Want to be sure there is something to indicate that this mob was definitively a player at some point.
 
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)	//Makes it so that even if you drop stuff in a belly you can recover it. So you can throw your clothes off or whatever.
-	if(!isliving(OldLoc))
-		return
-	var/mob/living/L = OldLoc
-	if(L == owner)	//Don't count things you ate yourself silly
-		return
-	SSinventory_return.catalogue_object(thing,L)
+	if(isliving(OldLoc))
+		var/mob/living/L = OldLoc
+		if(L != owner)	//Don't count things you ate yourself silly
+			SSinventory_return.catalogue_object(thing,L)
 	..()
