@@ -226,7 +226,7 @@ const AppearanceChangerEars = () => {
           {ear_color.map((color, index) => (
               <Box key={index}>
                 <ColorBox color={color} mr={1} />
-                <Button onClick={() => act('ear_color', { index: index })}> Change Tail Color {index+1}</Button>
+                <Button onClick={() => act('ear_color', { index: index+1 })}> Change Ear Color {index+1}</Button>
               </Box>
           ))}
         </Box>
@@ -262,7 +262,7 @@ const AppearanceChangerTails = () => {
           {tail_color.map((color, index) => (
               <Box key={index}>
                 <ColorBox color={color} mr={1} />
-                <Button onClick={() => act('tail_color', { index: index })}> Change Tail Color {index+1}</Button>
+                <Button onClick={() => act('tail_color', { index: index+1 })}> Change Tail Color {index+1}</Button>
               </Box>
           ))}
         </Box>
@@ -330,7 +330,7 @@ const AppearanceChangerWings = () => {
             {wing_color.map((color, index) => (
               <Box key={index}>
                 <ColorBox color={color} mr={1} />
-                <Button onClick={() => act('wing_color', { index: index })}> Change Wing Color {index+1}</Button>
+                <Button onClick={() => act('wing_color', { index: index+1 })}> Change Wing Color {index+1}</Button>
               </Box>
           ))}
           </Box>
