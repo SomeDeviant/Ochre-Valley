@@ -95,7 +95,7 @@ export const AppearanceChanger = () => {
             Genitals
           </Tabs.Tab>
         </Tabs>
-        <Box height="80%">
+        <Box height="100%">
           {tabIndex === 0 ? <AppearanceChangerColor /> : null}
           {tabIndex === 1 ? <AppearanceChangerHair /> : null}
           {tabIndex === 2 ? <AppearanceChangerFacialHair />: null}
@@ -103,7 +103,7 @@ export const AppearanceChanger = () => {
           {tabIndex === 4 ? <AppearanceChangerTails />: null}
           {tabIndex === 5 ? <AppearanceChangerHorns />: null}
           {tabIndex === 6 ? <AppearanceChangerWings />: null}
-          {tabIndex === 7 ? (<Section title="Accessories and Details">
+          {tabIndex === 7 ? (<Section title="Accessories and Details" fill scrollable>
                                 <AppearanceChangerAccessory />
                                 <AppearanceChangerFaceDetail />
                              </Section>): null}
@@ -359,7 +359,7 @@ const AppearanceChangerAccessory = () => {
   const { accessory_styles, accessory_style } = data;
 
   return(
-    <Section title="Accessories" fill scrollable>
+    <Section title="Accessories">
       <Button
           onClick={() => act('accessory', { acc: "none" })}
           selected={accessory_style === null}
@@ -381,7 +381,7 @@ const AppearanceChangerFaceDetail = () => {
   const { detail_styles, detail_style } = data;
 
   return(
-    <Section title="Face Details" fill scrollable>
+    <Section title="Face Details">
       <Button
           onClick={() => act('face_detail', { detail: "none" })}
           selected={detail_style === null}
