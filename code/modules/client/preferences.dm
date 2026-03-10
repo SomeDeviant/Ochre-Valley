@@ -280,6 +280,17 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			if(check_nameban(C.ckey) || (C.blacklisted() == 1))
 				real_name = pref_species.random_name(gender,1)
 			return
+	
+	//OV edit
+	if(!directory_erptag)
+		directory_erptag = "Unset"
+	if(!directory_tag)
+		directory_tag = "Unset"
+	if(!directory_gendertag)
+		directory_gendertag = "Unset"
+	if(!directory_sexualitytag)
+		directory_sexualitytag = "Unset"
+	//OV edit end
 
 	//Set the race to properly run race setter logic
 	set_new_race(pref_species, null)
@@ -2715,11 +2726,11 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					if(new_choice)
 						directory_erptag = new_choice
 				if("directory_gendertag")
-					var/new_choice = tgui_input_list(user, "Choose a vore preference:", "Directory Tag", GLOB.char_directory_sexualitytags)
+					var/new_choice = tgui_input_list(user, "Choose a vore preference:", "Directory Tag", GLOB.char_directory_gendertags)
 					if(new_choice)
 						directory_gendertag = new_choice
 				if("directory_sexualitytag")
-					var/new_choice = tgui_input_list(user, "Choose a vore preference:", "Directory Tag", GLOB.char_directory_gendertags)
+					var/new_choice = tgui_input_list(user, "Choose a vore preference:", "Directory Tag", GLOB.char_directory_sexualitytags)
 					if(new_choice)
 						directory_sexualitytag = new_choice
 				if("directory_ad")

@@ -117,10 +117,10 @@ GLOBAL_LIST_EMPTY(chardirectory_photos)
 			*/
 			name = strangername
 			species = H.dna.species.name
-			ooc_notes = H.ooc_notes
-			flavor_text = H.flavortext
-			nsfw_ooc_notes = H.erpprefs
-			nsfw_flavor_text = H.nsfwflavortext
+			ooc_notes = H.ooc_notes_cached
+			flavor_text = H.flavortext_cached
+			nsfw_ooc_notes = H.erpprefs_cached
+			nsfw_flavor_text = H.nsfwflavortext_cached
 			//photo = get_headshot_icon(H) //Does not work properly, sadly!
 
 /*
