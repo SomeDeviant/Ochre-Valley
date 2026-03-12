@@ -111,7 +111,7 @@
 			chosen_buff = general_buffs[choice]
 
 	var/duration_choice = input("Select Duration for the Blessing:") as null|anything in list( \
-		"1 Minute", "5 Minutes", "10 Minutes", "20 Minutes", \
+		"Default", "1 Minute", "5 Minutes", "10 Minutes", "20 Minutes", \
 		"30 Minutes", "60 Minutes", "4 Hours")
 	if(!duration_choice)
 		return FALSE
