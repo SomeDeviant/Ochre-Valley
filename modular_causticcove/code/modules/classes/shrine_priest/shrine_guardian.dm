@@ -37,7 +37,7 @@
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/eastpants2
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/eastshirt2
-	shoes = /datum/supply_pack/rogue/wardrobe/shoes/sandals
+	shoes = /obj/item/clothing/shoes/roguetown/gladiator //OV Edit: Fixed pathing for sandals
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	gloves = /obj/item/clothing/neck/roguetown/psicross/astrata
 	belt = /obj/item/storage/belt/rogue/leather/knifebelt/black/kazengun
@@ -61,6 +61,6 @@
 				beltr = /obj/item/quiver/arrows
 			if("Naginata + Recurve Bow")
 				H.adjust_skillrank_up_to(/datum/skill/combat/bows, 4, TRUE)
-				backr = /obj/item/rogueweapon/spear/naginata
-				r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
+				r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve //OV Edit: Adjusted for spawn
+				l_hand = /obj/item/rogueweapon/spear/naginata //OV Edit: Adjusted for spawn
 				beltr = /obj/item/quiver/arrows
