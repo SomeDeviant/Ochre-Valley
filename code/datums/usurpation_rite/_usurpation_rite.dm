@@ -21,7 +21,7 @@
 	var/started_at = 0
 	var/new_ruler_title = "Grand Duke"
 	var/new_ruler_title_f = "Grand Duchess"
-	var/new_ruler_title_n = "Monarch" //OV Add: Gender Neutral Revamp
+	var/new_ruler_title_n = "Grand Monarch" //OV Add: Gender Neutral Revamp
 	var/new_realm_type = "Grand Duchy"
 	var/new_realm_type_short = "Duchy"
 	var/mob/living/carbon/human/contester
