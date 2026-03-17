@@ -47,6 +47,7 @@ GLOBAL_LIST_INIT(learnable_spells, (list(/obj/effect/proc_holder/spell/invoked/p
 		/obj/effect/proc_holder/spell/self/conjure_armor,
 		/obj/effect/proc_holder/spell/self/conjure_armor/dragonhide,
 		/obj/effect/proc_holder/spell/self/magicians_brick,
+		/obj/effect/proc_holder/spell/self/aetherknife,	//OV Add
 		/obj/effect/proc_holder/spell/invoked/fire_cascade,
 		/obj/effect/proc_holder/spell/invoked/firewalker,
 		/obj/effect/proc_holder/spell/invoked/thunderstrike,
@@ -85,8 +86,9 @@ GLOBAL_LIST_INIT(utility_spells, (list(
 		/obj/effect/proc_holder/spell/targeted/touch/nondetection,
 		/obj/effect/proc_holder/spell/invoked/darkvision, // Buff but it is fine to also put it in this list
 		/obj/effect/proc_holder/spell/self/magicians_brick,
+		/obj/effect/proc_holder/spell/self/aetherknife,	//OV Add
 		/obj/effect/proc_holder/spell/invoked/conjure_tool/mage, // OV Add
-		/obj/effect/proc_holder/spell/invoked/mirror_transform 
+		/obj/effect/proc_holder/spell/invoked/mirror_transform
 		)
 ))
 
