@@ -2,7 +2,7 @@
 
 | Website                   | Link                                           |
 |---------------------------|------------------------------------------------|
-| Discord | (N/A FOR NOW)
+| Discord | [https://discord.gg/qpf3BtBUXq](https://discord.gg/qpf3BtBUXq)
 | Code    | [https://github.com/Ochre-Valley/Ochre-Valley](https://github.com/Ochre-Valley/Ochre-Valley)    |
 | Wiki    | [https://azurepeak.miraheze.org/wiki/Main_Page](https://azurepeak.miraheze.org/wiki/Main_Page) |
 
