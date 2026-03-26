@@ -1285,7 +1285,7 @@
 		else
 			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "digestion_noises")
 	if(prob(belchchance))//Unsure if this should go in escapable or not, leaving it here for now.
-		owner.emote("belch")
+		owner.emote("burp") // OV Edit - Burp, not belch. Should probably fix this upstream too.
 	if(escapable) //If the stomach has escapable enabled.
 		if(prob(escapechance)) //Let's have it check to see if the prey escapes first.
 			to_chat(R, escape_attempt_prey_message)
