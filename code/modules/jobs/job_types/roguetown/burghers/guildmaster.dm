@@ -23,7 +23,7 @@
 	round_contrib_points = 3
 	cmode_music = 'sound/music/cmode/towner/combat_retired.ogg'
 
-	job_traits = list(TRAIT_TRAINED_SMITH, TRAIT_SEEPRICES, TRAIT_SMITHING_EXPERT, TRAIT_SEWING_EXPERT, TRAIT_HOMESTEAD_EXPERT, TRAIT_ARCYNE_T2) //CC edit: upped arcyne to t2
+	job_traits = list(TRAIT_TRAINED_SMITH, TRAIT_SEEPRICES, TRAIT_SMITHING_EXPERT, TRAIT_SEWING_EXPERT, TRAIT_HOMESTEAD_EXPERT,)
 	// Guildmaster get way less gate due to their role
 
 	advclass_cat_rolls = list(CTAG_GUILDSMASTER = 2)
@@ -56,7 +56,6 @@
 		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/craft/carpentry = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/craft/masonry = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE, //caustic edit
 		/datum/skill/craft/blacksmithing = SKILL_LEVEL_MASTER,
 		/datum/skill/craft/armorsmithing = SKILL_LEVEL_MASTER,
 		/datum/skill/craft/weaponsmithing = SKILL_LEVEL_MASTER,
@@ -99,16 +98,12 @@
 			/obj/item/blueprint/mace_mushroom = 1
 			)
 		belt = /obj/item/storage/belt/rogue/leather
-		neck = /obj/item/storage/belt/rogue/pouch/coins/rich //cc edit start
-		beltl = /obj/item/storage/magebag/starter //cc edit end
+		beltl = /obj/item/storage/belt/rogue/pouch/coins/rich //cc edit start
 		beltr = /obj/item/storage/keyring/guildmaster
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/enchant_weapon)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_weapon)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/conjure_armor)
 		ADD_TRAIT(H, TRAIT_MASTER_CARPENTER, TRAIT_GENERIC)		
-		ADD_TRAIT(H, TRAIT_MASTER_MASON, TRAIT_GENERIC)	
-		SStreasury.give_money_account(ECONOMIC_UPPER_CLASS, H, "Savings.")
+		ADD_TRAIT(H, TRAIT_MASTER_MASON, TRAIT_GENERIC)
+		if(H.mind)
+			SStreasury.give_money_account(ECONOMIC_UPPER_CLASS, H, "Savings.")
 
 /datum/outfit/job/roguetown/guildmaster/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
@@ -133,8 +128,7 @@
 		if(do_after(src, 15 SECONDS, target = src)) // Reduced to 15 seconds from 30 on the original Herald PR. 15 is well enough time for sm1 to shove you.
 			say(announcementinput)
 			var/sanitized_input = trim(copytext(sanitize(announcementinput), 1, MAX_MESSAGE_LEN))
-			var/accented_input = treat_message_accent(sanitized_input, strings("accent_universal_ov.json", "universal"), 1) // OV Edit: use our own word list
-			var/treated_input = treat_message(accented_input, /datum/language/common)
+			var/treated_input = treat_message(sanitized_input, /datum/language/common)
 			priority_announce("[treated_input]", "The Guildmaster Heralds", 'sound/misc/bell.ogg', sender = src)
 			COOLDOWN_START(src, guildmaster_announcement, GUILDMASTER_ANNOUNCEMENT_COOLDOWN)
 		else

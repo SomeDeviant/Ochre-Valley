@@ -15,7 +15,6 @@
 		"Stone Skin" = /datum/status_effect/buff/stoneskin,
 		"Hawk Eyes" = /datum/status_effect/buff/hawks_eyes,
 		"Dragon Eyes" = /datum/status_effect/buff/dragonhide,
-		"Fire Walker" = /datum/status_effect/buff/firewalker,
 		"Haste" = /datum/status_effect/buff/haste,
 		"Guidance" = /datum/status_effect/buff/guidance,
 		"Giants Strength" = /datum/status_effect/buff/giants_strength,

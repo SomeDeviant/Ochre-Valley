@@ -710,23 +710,23 @@
 				return
 			Tar.admin_buff(user, "general")
 		
-		if("give_spell")
+		/* if("give_spell") COMMENTED OUT PENDING REWORK
 			var/mob/living/carbon/human/Tar = target
 			if(!istype(Tar))
 				return
 			var/obj/effect/proc_holder/spell/new_spell = tgui_input_list(user, "Which spell do you want to give?", "Spells", GLOB.learnable_spells)
 			if(!new_spell)
 				return
-			Tar.AddSpell(new_spell)
+			Tar.AddSpell(new_spell) */ 
 		
-		if("remove_spell")
+		/* if("remove_spell") COMMENTED OUT PENDING REWORK
 			var/mob/living/carbon/human/Tar = target
 			if(!istype(Tar))
 				return
 			var/obj/effect/proc_holder/spell/old_spell = tgui_input_list(user, "Which spell do you want to give?", "Spells", Tar.mind.spell_list)
 			if(!old_spell)
 				return
-			Tar.mind.RemoveSpell(old_spell)
+			Tar.mind.RemoveSpell(old_spell) */
 
 		/*
 		if("vent_crawl")

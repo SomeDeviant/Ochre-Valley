@@ -56,7 +56,7 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 		/datum/advclass/mage,
 		/datum/advclass/mage/spellsinger,
 		/datum/advclass/mage/spellblade,
-		/datum/advclass/mage/prereworkspellblade, // OV Add
+		/datum/advclass/mage/spellfist,
 		/datum/advclass/ranger,
 		/datum/advclass/ranger/wayfarer,
 		/datum/advclass/ranger/bombadier,
@@ -70,7 +70,7 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 		/datum/advclass/foreigner/refugee,
 		/datum/advclass/foreigner/slaver,
 		///Caustic edit
-		/datum/advclass/mage/spellthief,
+		///datum/advclass/mage/spellthief, COMMENTED OUT PENDING REWORK
 		/datum/advclass/rogue/buccaneer,
 		///Caustic edit end
 		/datum/advclass/foreigner/shepherd,

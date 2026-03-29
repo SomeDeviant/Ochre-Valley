@@ -172,7 +172,7 @@
 					user.say("PLAY YOUR HARP- LET EACH STRING DEAFEN MY FOES!!") // seriously im working w/ ZERO lore.
 					if(do_after(user, 50))
 						user.say("--ON WITH THE SHOW!!") // i miss skipper
-						to_chat(user,span_cultsmall("Every play needs it's stagehands. Xylix will quicken the slow, speed your sneaking, and quiet your footsteps... for a time."))
+						to_chat(user,span_cultsmall("Every play needs its stagehands. Xylix will quicken the slow, speed your sneaking, and quiet your footsteps... for a time."))
 						playsound(loc, 'sound/magic/mockery.ogg', 60, FALSE, -1)
 						stagehands_silence(src)
 						user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
@@ -1014,7 +1014,7 @@
 	name = "Rune of Death"
 	desc = "A Holy Rune of Necra. Quiet acceptance stirs within you."
 	icon_state = "necra_chalky"
-	var/deathrites = list("Undermaiden's Bargain", "Vow to the Undermaiden", "The Toll")
+	var/deathrites = list("Undermaiden's Bargain", "The Toll")
 	var/coinslot = 0
 
 
@@ -1318,7 +1318,7 @@
 	neck = /obj/item/clothing/neck/roguetown/bevor/zizo
 	backr = /obj/item/rogueweapon/sword/long/zizo
 
-	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mending/lesser)
+	H.mind.AddSpell(new /datum/action/cooldown/spell/mending/lesser)
 
 
 /obj/structure/ritualcircle/matthios
@@ -1480,7 +1480,7 @@
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/chainmantle/matthios
 	backr = /obj/item/rogueweapon/flail/peasantwarflail/matthios
 
-	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mending/lesser)
+	H.mind.AddSpell(new /datum/action/cooldown/spell/mending/lesser)
 
 /obj/structure/ritualcircle/graggar
 	name = "Rune of Violence"

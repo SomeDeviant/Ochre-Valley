@@ -18,8 +18,8 @@
 /datum/action/item_action/organ_action/use/harpy_sing
 	name = "Harpy's song"
 	desc = "Project your voice through song."
-	icon_icon = 'icons/obj/surgery.dmi'
-	button_icon_state = "harpysong"
+	// icon = 'icons/mob/actions/bardsongs.dmi' //OV Edit COMMENTING OUT PENDING BUGTESTING
+	button_icon_state = "melody_t1_base" //OV Edit
 
 /datum/action/item_action/organ_action/use/harpy_sing/Trigger()
 	if(do_after(owner, 2 SECONDS, owner))

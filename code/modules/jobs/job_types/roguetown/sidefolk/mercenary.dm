@@ -28,6 +28,7 @@
 		/datum/advclass/mercenary/etrusca/balestrieri,
 		/datum/advclass/mercenary/desert_rider,
 		/datum/advclass/mercenary/desert_rider/zeybek,
+		/datum/advclass/mercenary/desert_rider/sahir,
 		/datum/advclass/mercenary/desert_rider/almah,
 		/datum/advclass/mercenary/forlorn,
 		/datum/advclass/mercenary/vaquero,
@@ -44,7 +45,10 @@
 		/datum/advclass/mercenary/routier,
 		/datum/advclass/mercenary/rumaclan,
 		/datum/advclass/mercenary/rumaclan/sasu,
+		/datum/advclass/mercenary/hangyaku,
+		/datum/advclass/mercenary/chonin,
 		/datum/advclass/mercenary/seonjang,
+		/datum/advclass/mercenary/hangyaku,
 		///Caustic edit
 		/datum/advclass/mercenary/shrine_priest,
 		///Caustic edit end
@@ -55,6 +59,7 @@
 		/datum/advclass/mercenary/warscholar/vizier,
 		/datum/advclass/mercenary/blackoak,
 		/datum/advclass/mercenary/blackoak/ranger,
+		/datum/advclass/mercenary/blackoak/adept,
 		/datum/advclass/mercenary/underdweller,
 		/datum/advclass/mercenary/grudgebearer,
 		/datum/advclass/mercenary/grudgebearer/soldier,

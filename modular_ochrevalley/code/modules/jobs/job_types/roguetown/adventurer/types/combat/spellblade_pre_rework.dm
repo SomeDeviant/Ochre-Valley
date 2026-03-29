@@ -1,3 +1,4 @@
+/* COMMENTED OUT PENDING REWORK AAAAAA //OV EDIT
 /datum/advclass/mage/prereworkspellblade
 	name = "Spellblade"
 	tutorial = "You are skilled in both the arcyne and the art of the blade. However, you are a master of neither, and any armor heavier than light hampers your ability to cast."
@@ -64,3 +65,5 @@
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)
 			H.cmode_music = 'sound/music/combat_heretic.ogg'
+			*/
+			

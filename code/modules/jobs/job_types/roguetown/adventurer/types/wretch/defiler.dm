@@ -1,3 +1,4 @@
+/* COMMENTING OUT PENDING REWORK //OV EDIT
 /datum/advclass/wretch/shrine_defiler
 	name = "Shrine Defiler"
 	tutorial = "Curiosity got the best of you. You serve no master, other than PROGRESS itself. Your old charge is long gone. And yet, you are still here. You seek to spread your inhumen energies to the town- Willingly, or not."
@@ -44,3 +45,4 @@
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/minion_order)
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/gravemark)
 	H.set_blindness(0)
+	*/
