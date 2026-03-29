@@ -118,7 +118,7 @@
 	. = ..()
 	animate(src, alpha = 0, time = duration, easing = EASE_IN)
 */
-/mob/proc/playsound_local(atom/turf_source, soundin, vol as num, vary, frequency, falloff, channel, pressure_affected = TRUE, sound/S, repeat, muffled, preference)
+/mob/proc/playsound_local(atom/turf_source, soundin, vol as num, vary, frequency, falloff, channel, pressure_affected = TRUE, sound/S, repeat, muffled, pref_toggle)
 	if(!client || !can_hear())
 		return FALSE
 
@@ -149,8 +149,8 @@
 	var/vol2use = vol
 	if(client.prefs)
 		vol2use = vol * (client.prefs.mastervol * 0.01)
-		if(preference)
-			switch(preference)
+		if(pref_toggle)
+			switch(pref_toggle)
 				if("digestion_noises")
 					if(!client.prefs.digestion_noises)
 						return
