@@ -3861,7 +3861,6 @@
 #include "modular_causticcove\code\modules\spells\spell_types\wizard\conjure\conjure_tool.dm"
 #include "modular_causticcove\code\modules\taurs\taur_bodyparts.dm"
 #include "modular_ochrevalley\code\modules\cargo\packrogue\kink_stuff.dm"
-#include "modular_ochrevalley\code\modules\client\preferences_pref_badges.dm"
 #include "modular_ochrevalley\code\modules\dcbot\makenote.dm"
 #include "modular_ochrevalley\code\modules\jobs\job_types\roguetown\adventurer\types\combat\random_adventurer.dm"
 #include "modular_ochrevalley\code\modules\mob\living\carbon\human\npc\drider_drow.dm"
@@ -3948,7 +3947,9 @@
 #include "modular_ochrevalley\code\vore_verb.dm"
 
 
-#include "modular_ochrevalley\code\modules\character_setup_overrides\character_overrides.dm"
+#include "modular_ochrevalley\code\modules\client\character_setup\character_overrides.dm"
+#include "modular_ochrevalley\code\modules\client\character_setup\act\character_creator\identity.dm"
+#include "modular_ochrevalley\code\modules\client\character_setup\data\character_creator\identity.dm"
 #include "modular_ochrevalley\code\game\objects\items\weapons\ranged\ammo.dm"
 #include "modular_ochrevalley\code\game\objects\items\weapons\ranged\arquebus.dm"
 #include "modular_ochrevalley\code\modules\cargo\packsrogue\merchant\weapons\merch_weapons_foreign.dm"

@@ -1,3 +1,6 @@
+/datum/preferences/should_hide_pq_for(mob/user)
+	return hide_pq
+
 /datum/preferences/handle_title_pref_selection(mob/user)
 	var/old = titles_pref
 	var/titles_input = tgui_input_list(user, "Choose your character's titles", "TITLES", GLOB.titles_list)

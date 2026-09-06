@@ -56,6 +56,7 @@ const SubtabAppearanceCardBody = (props) => {
   const {
     allowed_taur_types,
     body_size,
+    sizecat,
     body_type,
     mcolor,
     mcolor2,
@@ -129,7 +130,12 @@ const SubtabAppearanceCardBody = (props) => {
           </>
         ) : null}
         <LabeledGridList.Item label="Sprite Scale">
-          <Button onClick={() => act('body_size')}>{body_size}%</Button>
+          {/* OV EDIT START - Size Category Display */}
+          <Button mr={1} onClick={() => act('body_size')}>
+            {body_size}%
+          </Button>
+          Size Category: {sizecat}
+          {/* OV EDIT END - Size Category Display*/}
         </LabeledGridList.Item>
         {allowed_taur_types.length ? (
           <LabeledGridList.Item label="Taur Body Type">

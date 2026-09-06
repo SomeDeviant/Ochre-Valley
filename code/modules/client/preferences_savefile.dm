@@ -610,10 +610,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["lich_headshot_link"]		>> lich_headshot_link
 	//setting up the hooks for this, but not shown yet
 	S["werewolf_headshot_link"]	>> werewolf_headshot_link
-	// OC Edit Start
+	// OV Edit Start
 	S["werewolf_setname"]			>> werewolf_setname
 	S["werewolf_setdesc"]			>> werewolf_setdesc
-	// OC Edit End
+	// OV Edit End
 	S["qsr"] 					>> qsr_pref
 	S["flavortext"]				>> flavortext
 	S["ooc_notes"]				>> ooc_notes
@@ -680,7 +680,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	erpprefs_cached = erpprefs ? parsemarkdown_basic(html_encode(erpprefs), hyperlink = TRUE) : ""
 	rumour_cached = rumour ? parsemarkdown_basic(html_encode(rumour), hyperlink = TRUE) : ""
 	noble_gossip_cached = noble_gossip ? parsemarkdown_basic(html_encode(noble_gossip), hyperlink = TRUE) : ""
-	werewolf_setdesc_cached = werewolf_setdesc ? parsemarkdown_basic(html_encode(werewolf_setdesc), hyperlink = TRUE) : "" // OC Edit
+	werewolf_setdesc_cached = werewolf_setdesc ? parsemarkdown_basic(html_encode(werewolf_setdesc), hyperlink = TRUE) : "" // OV Edit
 	//Sanitize: Note, some sanitization is already done in subprocs like _load_combat_music
 	sanitize_character(S)
 	return TRUE
@@ -908,10 +908,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["headshot_link"] , headshot_link)
 	WRITE_FILE(S["vampire_headshot_link"] , vampire_headshot_link)
 	WRITE_FILE(S["werewolf_headshot_link"] , werewolf_headshot_link)
-	// OC Edit S
+	// OV ADD START
 	WRITE_FILE(S["werewolf_setname"] , werewolf_setname)
 	WRITE_FILE(S["werewolf_setdesc"] , html_decode(werewolf_setdesc))
-	// OC Edit E
+	// OV ADD END
 	WRITE_FILE(S["lich_headshot_link"] , lich_headshot_link)
 	WRITE_FILE(S["qsr"] , qsr_pref)
 	WRITE_FILE(S["preset_bounty_enabled"] , preset_bounty_enabled)

@@ -29,6 +29,7 @@ export type BodyData = {
   available_skin_tones: Record<string, string>;
   skin_tone: string; // VALUE of available_skin_tones
   body_size: number;
+  sizecat: string; // OV ADD - Size Cat Indicator
 
   update_mutant_colors: BooleanLike;
   use_mutcolor: BooleanLike;

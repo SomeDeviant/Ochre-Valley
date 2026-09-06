@@ -134,11 +134,11 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/lich_headshot_link
 	var/vampire_headshot_link
 	var/werewolf_headshot_link //not used but setting up for the future
-	// OC Edit Start // Inregards to werewolf_headshot_link comment above me: Hey, guess what. I'll set it up for ya and then some~!
+	// OV ADD START // Inregards to werewolf_headshot_link comment above me: Hey, guess what. I'll set it up for ya and then some~!
 	var/werewolf_setname
 	var/werewolf_setdesc
 	var/werewolf_setdesc_cached
-	// OC Edit End
+	// OV ADD END
 	var/chatheadshot = FALSE
 	var/ooc_extra
 	var/song_artist

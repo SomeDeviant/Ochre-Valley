@@ -17,6 +17,9 @@
 		"available_skin_tones" = get_valid_skin_tones(),
 		"skin_tone" = skin_tone,
 		"body_size" = (features["body_size"] * 100),
+		// OV ADD START - Size Category Add
+		"sizecat" = sizecat.name,
+		// OV ADD END
 
 		"update_mutant_colors" = update_mutant_colors,
 		"use_mutcolor" = (MUTCOLORS in pref_species.species_traits) || (MUTCOLORS_PARTSONLY in pref_species.species_traits),
