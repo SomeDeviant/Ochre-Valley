@@ -370,7 +370,11 @@ const ComposeView = () => {
 
       <FormRow
         label={
-          isBlockade ? 'Blockaded Region' : isHoardRecovery ? 'Hoard Region' : 'Region'
+          isBlockade
+            ? 'Blockaded Region'
+            : isHoardRecovery
+              ? 'Hoard Region'
+              : 'Region'
         }
       >
         <select

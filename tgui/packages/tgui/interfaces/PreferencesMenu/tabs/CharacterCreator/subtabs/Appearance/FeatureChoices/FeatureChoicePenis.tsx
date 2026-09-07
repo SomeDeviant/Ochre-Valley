@@ -16,7 +16,8 @@ export const FeatureChoicePenis = (props: { customizer: Customizer }) => {
   const { customizer } = props;
   const { act } = useBackendStrict();
   const { choices } = customizer;
-  const { penis_size, penis_functional, sheath_type } = choices as PenisCustomizer;
+  const { penis_size, penis_functional, sheath_type } =
+    choices as PenisCustomizer;
 
   return (
     <Stack.Item>

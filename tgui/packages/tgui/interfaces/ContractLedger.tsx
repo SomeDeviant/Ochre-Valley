@@ -331,8 +331,9 @@ const HoardRecoveryCallStrip = () => {
     >
       <div style={{ fontWeight: 'bold', marginBottom: '3px' }}>
         Hoard Recovery - a Fellowship of {minFellows}+ may call a recovery writ
-        after pledging {pledge}m on any region whose banditry hoard has reached {hoardMin}m. Pays the standard blockade reward; the reclaimed
-        hoard is taxed {taxPct} as Recovered Spoils.
+        after pledging {pledge}m on any region whose banditry hoard has reached{' '}
+        {hoardMin}m. Pays the standard blockade reward; the reclaimed hoard is
+        taxed {taxPct} as Recovered Spoils.
       </div>
       {regions.map((r) => (
         <div
@@ -355,7 +356,9 @@ const HoardRecoveryCallStrip = () => {
             <Button
               disabled={!!blockReason}
               tooltip={blockReason}
-              onClick={() => act('request_hoard_recovery', { region: r.region })}
+              onClick={() =>
+                act('request_hoard_recovery', { region: r.region })
+              }
             >
               Call for Recovery
             </Button>

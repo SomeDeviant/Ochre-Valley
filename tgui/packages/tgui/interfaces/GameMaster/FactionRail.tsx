@@ -97,7 +97,11 @@ export function FactionRail(props: Props) {
           {pinned.length > 0 && (
             <>
               {pinned.map(renderRow)}
-              <Box mt={0.5} mb={0.5} style={{ borderTop: '1px solid rgba(122, 86, 22, 0.35)' }} />
+              <Box
+                mt={0.5}
+                mb={0.5}
+                style={{ borderTop: '1px solid rgba(122, 86, 22, 0.35)' }}
+              />
             </>
           )}
           {rest.map(renderRow)}
