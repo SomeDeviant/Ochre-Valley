@@ -153,10 +153,6 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	return "[spanpart1][spanpart2][colorpart][freqpart][languageicon][compose_track_href(speaker, namepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][arrowpart][endspanpart][messagepart]"
 
 /atom/movable/proc/get_language_marker(datum/language/language, content = "")
-	//OV ADD START
-	if(processed_spans?.Find(SPAN_PETRIFIED_SPEECH))
-		return content
-	//OV ADD END
 	if(!language || !show_language_icon())
 		return content
 	var/datum/language/language_datum = GLOB.language_datum_instances[language]

@@ -23,7 +23,11 @@
 		if(ERECT_STATE_NONE)
 			preview_boner_state = ERECT_STATE_PARTIAL
 		if(ERECT_STATE_PARTIAL)
+		//OV EDIT
+			preview_boner_state = ERECT_STATE_STIFF
+		if(ERECT_STATE_STIFF)
 			preview_boner_state = ERECT_STATE_HARD
+		//OV EDIT END
 		else
 			preview_boner_state = ERECT_STATE_NONE
 
