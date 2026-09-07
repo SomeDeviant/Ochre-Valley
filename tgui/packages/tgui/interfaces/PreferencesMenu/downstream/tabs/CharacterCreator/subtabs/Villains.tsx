@@ -27,7 +27,7 @@ type WerewolfData = {
   werewolf_setname: string;
   werewolf_setdesc: string;
 };
-const Werewolf = (props) => {
+const Werewolf = (props: any) => {
   const { act, data } = useBackendStrict<WerewolfData>();
   const { werewolf_headshot_link, werewolf_setname, werewolf_setdesc } = data;
   return (

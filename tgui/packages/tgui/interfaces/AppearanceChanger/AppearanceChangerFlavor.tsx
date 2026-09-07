@@ -4,7 +4,7 @@ import { capitalize } from 'tgui-core/string';
 
 import type { Data } from './types';
 
-export const AppearanceChangerFlavor = (props) => {
+export const AppearanceChangerFlavor = (props: any) => {
   const { act, data } = useBackend<Data>();
   const { flavor_text } = data;
 

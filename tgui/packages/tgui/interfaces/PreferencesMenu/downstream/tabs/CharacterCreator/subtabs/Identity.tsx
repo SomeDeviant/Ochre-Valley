@@ -53,7 +53,7 @@ type PrefBadgesData = {
   badge_type: string;
 };
 
-const PrefBadges = (props) => {
+const PrefBadges = (props: any) => {
   const { act, data } = useBackendStrict<PrefBadgesData>();
   const {
     directory_pvp,
@@ -121,7 +121,7 @@ type CharDirectoryData = {
   directory_sexualitytag: string;
 };
 
-const CharDirectory = (props) => {
+const CharDirectory = (props: any) => {
   const { act, data } = useBackendStrict<CharDirectoryData>();
   const {
     show_in_directory,
