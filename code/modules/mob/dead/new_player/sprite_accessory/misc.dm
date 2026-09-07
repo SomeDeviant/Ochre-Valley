@@ -115,6 +115,7 @@
 // CAUSTIC EDIT start
 /datum/sprite_accessory/face_detail/monstermaw
 	name = "Monster Maw"
+	icon = 'modular_ochrevalley/icons/mob/sprite_accessory/face_detail.dmi'
 	icon_state = "monstermaw"
 	layer = BODY_LAYER
 	color_disabled = FALSE
