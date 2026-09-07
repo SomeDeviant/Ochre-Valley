@@ -2,9 +2,23 @@
 	.=..()
 	if(.)
 		return
+	.=ui_act_ov_pref_badges(action, params, ui, state)
+	if(.)
+		return
+	.=ui_act_ov_character_directory(action, params, ui, state)
+	if(.)
+		return
+
+/datum/preferences/proc/ui_act_ov_pref_badges(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	var/mob/user = ui.user
 
 	switch(action)
+		if("pvp_opt_in")
+			var/new_choice = tgui_input_list(user, "Choose your PvP opt-in status (Note, opting into PvP does not mean that proper escalation should not be followed):", "Directory Tag", GLOB.char_directory_pvp)
+			if(new_choice)
+				directory_pvp = new_choice
+			return CHARACTER_ACT_DATA_UPDATE
+
 		if("choose_grab_and_gulp")
 			var/new_choice = tgui_input_list(user, "Do you want players to be able to grab you for scenes with minimal RP build up?","Grab and Gulp",list("No","Yes"))
 			if(!new_choice)
@@ -52,4 +66,47 @@
 			if(!new_choice)
 				return CHARACTER_ACT_DATA_UPDATE
 			badge_type = new_choice
+			return CHARACTER_ACT_DATA_UPDATE
+
+/datum/preferences/proc/ui_act_ov_character_directory(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	var/mob/user = ui.user
+
+	switch(action)
+		if("show_in_directory")
+			show_in_directory = !show_in_directory
+			if(!directory_erptag)
+				directory_erptag = "Unset"
+			if(!directory_tag)
+				directory_tag = "Unset"
+			if(!directory_gendertag)
+				directory_gendertag = "Unset"
+			if(!directory_sexualitytag)
+				directory_sexualitytag = "Unset"
+			if(!directory_pvp)
+				directory_pvp = "Unset"
+			return CHARACTER_ACT_DATA_UPDATE
+		if("directory_tag")
+			var/new_choice = tgui_input_list(user, "Choose a vore preference:", "Directory Tag", GLOB.char_directory_tags)
+			if(new_choice)
+				directory_tag = new_choice
+			return CHARACTER_ACT_DATA_UPDATE
+		if("directory_erptag")
+			var/new_choice = tgui_input_list(user, "Choose a vore preference:", "Directory Tag", GLOB.char_directory_erptags)
+			if(new_choice)
+				directory_erptag = new_choice
+			return CHARACTER_ACT_DATA_UPDATE
+		if("directory_gendertag")
+			var/new_choice = tgui_input_list(user, "Choose a vore preference:", "Directory Tag", GLOB.char_directory_gendertags)
+			if(new_choice)
+				directory_gendertag = new_choice
+			return CHARACTER_ACT_DATA_UPDATE
+		if("directory_sexualitytag")
+			var/new_choice = tgui_input_list(user, "Choose a vore preference:", "Directory Tag", GLOB.char_directory_sexualitytags)
+			if(new_choice)
+				directory_sexualitytag = new_choice
+			return CHARACTER_ACT_DATA_UPDATE
+		if("directory_ad")
+			var/new_dir_ad = tgui_input_text(user, "Input an ad for your style of ERP to show in the character directory:", "Directory Ad", directory_ad, multiline = TRUE,  encode = FALSE, bigmodal = TRUE)
+			if(!isnull(new_dir_ad))
+				set_character_ad_value(ishuman(user) ? user : null, src, user?.mind, new_dir_ad)
 			return CHARACTER_ACT_DATA_UPDATE

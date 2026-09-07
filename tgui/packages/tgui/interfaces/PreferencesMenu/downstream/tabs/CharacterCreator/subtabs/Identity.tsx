@@ -1,5 +1,6 @@
 import { useBackendStrict } from 'tgui/backend';
 import { Button, LabeledList, Section, Stack } from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
 
 export const SubtabIdentityDownstreamPaneLeft = (props) => {
   // Suggested format:
@@ -34,10 +35,15 @@ export const SubtabIdentityDownstreamPaneRight = (props) => {
   //   </>
   // )
 
-  return null;
+  return (
+    <Stack.Item>
+      <CharDirectory />
+    </Stack.Item>
+  );
 };
 
 type PrefBadgesData = {
+  directory_pvp: string;
   badge_gng: string;
   badge_vore: string;
   badge_willing: string;
@@ -50,6 +56,7 @@ type PrefBadgesData = {
 const PrefBadges = (props) => {
   const { act, data } = useBackendStrict<PrefBadgesData>();
   const {
+    directory_pvp,
     badge_gng,
     badge_vore,
     badge_willing,
@@ -61,6 +68,11 @@ const PrefBadges = (props) => {
   return (
     <Section title="Pref Badges">
       <LabeledList>
+        <LabeledList.Item label="PvP Opt In">
+          <Button fluid onClick={() => act('pvp_opt_in')}>
+            {directory_pvp || 'Unset'}
+          </Button>
+        </LabeledList.Item>
         <LabeledList.Item label="Grab and Gulp">
           <Button fluid onClick={() => act('choose_grab_and_gulp')}>
             {badge_gng || 'Unset'}
@@ -94,6 +106,61 @@ const PrefBadges = (props) => {
         <LabeledList.Item label="Vore Methods">
           <Button fluid onClick={() => act('choose_vore_type')}>
             {badge_type || 'Unset'}
+          </Button>
+        </LabeledList.Item>
+      </LabeledList>
+    </Section>
+  );
+};
+
+type CharDirectoryData = {
+  show_in_directory: BooleanLike;
+  directory_tag: string;
+  directory_erptag: string;
+  directory_gendertag: string;
+  directory_sexualitytag: string;
+};
+
+const CharDirectory = (props) => {
+  const { act, data } = useBackendStrict<CharDirectoryData>();
+  const {
+    show_in_directory,
+    directory_tag,
+    directory_erptag,
+    directory_gendertag,
+    directory_sexualitytag,
+  } = data;
+  return (
+    <Section title="Character Directory">
+      <LabeledList>
+        <LabeledList.Item label="Show In Directory">
+          <Button fluid onClick={() => act('show_in_directory')}>
+            {show_in_directory ? 'Yes' : 'No'}
+          </Button>
+        </LabeledList.Item>
+        <LabeledList.Item label="Vore Pref Tag">
+          <Button fluid onClick={() => act('directory_tag')}>
+            {directory_tag || 'Unset'}
+          </Button>
+        </LabeledList.Item>
+        <LabeledList.Item label="ERP Pref Tag">
+          <Button fluid onClick={() => act('directory_erptag')}>
+            {directory_erptag || 'Unset'}
+          </Button>
+        </LabeledList.Item>
+        <LabeledList.Item label="Gender Tag">
+          <Button fluid onClick={() => act('directory_gendertag')}>
+            {directory_gendertag || 'Unset'}
+          </Button>
+        </LabeledList.Item>
+        <LabeledList.Item label="Sexuality Tag">
+          <Button fluid onClick={() => act('directory_sexualitytag')}>
+            {directory_sexualitytag || 'Unset'}
+          </Button>
+        </LabeledList.Item>
+        <LabeledList.Item label="Directory Ad">
+          <Button fluid onClick={() => act('directory_ad')}>
+            Edit
           </Button>
         </LabeledList.Item>
       </LabeledList>
