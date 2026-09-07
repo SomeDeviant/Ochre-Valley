@@ -145,6 +145,8 @@
 	var/headshot = ""
 	var/list/img_gallery = list()
 	var/list/nsfw_img_gallery = list()
+	var/ooc_extra_image
+	var/nsfw_ooc_extra_image
 	var/char_name
 	var/song_url
 	var/song_title
@@ -179,6 +181,9 @@
 			img_gallery = holder_human.img_gallery
 			// if(is_naked) //OV Edit - Commented out
 			nsfw_img_gallery = holder_human.nsfw_img_gallery
+			ooc_extra_image = holder_human.ooc_extra_img
+			// if(is_naked) //OV Edit - Commented out
+			nsfw_ooc_extra_image = holder_human.nsfw_ooc_extra_img
 		if(!headshot)
 			headshot = "headshot_red.png"
 
@@ -199,6 +204,9 @@
 		img_gallery = pref.img_gallery
 		// if(is_naked) //OV edit - commented out
 		nsfw_img_gallery = pref.nsfw_img_gallery
+		ooc_extra_image = pref.ooc_extra_img
+		// if(is_naked) //OV edit - commented out
+		nsfw_ooc_extra_image = pref.nsfw_ooc_extra_img
 		char_name = pref.real_name
 		song_url = pref.ooc_extra
 		is_vet = viewing.check_agevet()
@@ -233,6 +241,8 @@
 		"ooc_notes_nsfw" = ooc_notes_nsfw,
 		"img_gallery" = img_gallery,
 		"nsfw_img_gallery" = nsfw_img_gallery,
+		"ooc_extra_image" = ooc_extra_image,
+		"nsfw_ooc_extra_image" = nsfw_ooc_extra_image,
 		"has_song" = has_song,
 		"is_vet" = is_vet,
 		"is_donator" = holder ? is_donator(holder.ckey) : FALSE,
