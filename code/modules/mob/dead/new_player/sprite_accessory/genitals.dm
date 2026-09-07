@@ -157,19 +157,19 @@
 
 /datum/sprite_accessory/breasts/pair
 	icon_state = "pair"
-	preview_states = list("pair_2_ADJ")
+	preview_states = list("pair_2_FRONT") // OV EDIT - Layering Fix
 	name = "Pair"
 	color_key_defaults = list(KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/breasts/quad
 	icon_state = "quad"
-	preview_states = list("quad_2_ADJ")
+	preview_states = list("quad_2_FRONT") // OV EDIT - Layering Fix
 	name = "Quad"
 	color_key_defaults = list(KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/breasts/sextuple
 	icon_state = "sextuple"
-	preview_states = list("sextuple_2_ADJ")
+	preview_states = list("sextuple_2_FRONT") // OV EDIT - Layering Fix
 	name = "Sextuple"
 	color_key_defaults = list(KEY_CHEST_COLOR)
 
