@@ -2,7 +2,7 @@ import { useBackendStrict } from 'tgui/backend';
 import { HeadshotButton } from 'tgui/interfaces/PreferencesMenu/components';
 import { Button, LabeledList, Section, Stack } from 'tgui-core/components';
 
-export const SubtabVillainDownstream = (props) => {
+export const SubtabVillainDownstream = () => {
   // Suggested format:
   // return (
   //   <>

@@ -2,7 +2,7 @@ import { useBackendStrict } from 'tgui/backend';
 import { Button, LabeledList, Section, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-export const SubtabIdentityDownstreamPaneLeft = (props) => {
+export const SubtabIdentityDownstreamPaneLeft = () => {
   // Suggested format:
   // return (
   //   <>
@@ -22,7 +22,7 @@ export const SubtabIdentityDownstreamPaneLeft = (props) => {
   );
 };
 
-export const SubtabIdentityDownstreamPaneRight = (props) => {
+export const SubtabIdentityDownstreamPaneRight = () => {
   // Suggested format:
   // return (
   //   <>

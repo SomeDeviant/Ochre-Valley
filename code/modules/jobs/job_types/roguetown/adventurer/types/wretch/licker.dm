@@ -13,9 +13,13 @@
 	maximum_possible_slots = 2
 	applies_post_equipment = FALSE
 
-//OV Add Start
+	subclass_stashed_items = list(
+		"Stashed Funds" = /obj/item/roguecoin/silver/pile/wretchpile,
+	)
+
+	//OV Add Start
 	vice_limits = list(/datum/charflaw/hemovore)
-//OV Add End
+	//OV Add End
 
 /datum/outfit/job/roguetown/wretch/licker/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -112,8 +112,30 @@ GLOBAL_LIST_EMPTY(locked_sex_objects)
 	"Enormous" = ENORMOUS_PENIS_SIZE,\
 	)
 
+#define SHEATH_TYPES_BY_NAME list(\
+	"No Sheath" = SHEATH_TYPE_NONE,\
+	"Sheath" = SHEATH_TYPE_NORMAL,\
+	"Slit" = SHEATH_TYPE_SLIT,\
+	)
+
 #define EARS_NORMAL 0
 #define EARS_SENSITIVE 1 //Should this be used for ANYTHING else - move it. / Also only works on ANTHROS for some reason
+
+#define ERECT_STATE_NONE 0
+#define ERECT_STATE_PARTIAL 1
+#define ERECT_STATE_STIFF 2 //OV EDIT
+#define ERECT_STATE_HARD 3 //OV EDIT
+
+#define ERECT_STATES_BY_NAME list(\
+	"Unaroused" = ERECT_STATE_NONE,\
+	"Half-Aroused" = ERECT_STATE_PARTIAL,\
+	"Stiff" = ERECT_STATE_STIFF,\
+	"Aroused" = ERECT_STATE_HARD,\
+	)
+
+#define MIN_TESTICLES_SIZE 1
+#define DEFAULT_TESTICLES_SIZE 2
+#define MAX_TESTICLES_SIZE 5 //OV EDIT
 
 #define TESTICLE_SIZES list(\
 	SMALL_TESTICLES_SIZE,\

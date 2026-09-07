@@ -192,7 +192,7 @@
 	var/do_subtle = sex_session.doing_subtly
 	var/message = get_start_message(user, target)
 	if(message)
-		user.visible_message(message, vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
+		user.visible_message(message, vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 	var/sound = get_start_sound(user, target)
 	if(sound)
@@ -216,9 +216,11 @@
 	SHOULD_CALL_PARENT(TRUE)
 	unlock_sex_object(user, target)
 
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
 	var/message = get_finish_message(user, target)
 	if(message)
-		user.visible_message(message)
+		user.visible_message(message, vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 	return
 
