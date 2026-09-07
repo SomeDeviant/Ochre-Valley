@@ -33,7 +33,7 @@
 			else if(firstspace == name_length)
 				real_name += "[pick(GLOB.last_names)]"
 
-	//OV EDIT - No More Name Randomize TEST
+	//OV EDIT - No More Name Randomize
 	character.real_name = real_name
 	/*if(real_name in GLOB.chosen_names)
 		character.real_name = pref_species.random_name(gender)
