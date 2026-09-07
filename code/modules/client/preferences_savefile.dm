@@ -249,7 +249,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	if(parent && is_banned_from(parent.ckey, ROLE_SYNDICATE))
 		be_special = list()
-
 	verify_keybindings_valid()
 
 
@@ -583,11 +582,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	_load_virtue(S)
 	_load_flaw(S)
-	//Caustic edit
-//	_load_sizecat(S) //OV EDIT - Not needed, set based on scale now
-	//_load_pickupable(S)
-	//Caustic edit end
+
 	_load_culinary_preferences(S)
+
 	// LETHALSTONE edit: jank-ass load our statpack choice
 	_load_statpack(S)
 
