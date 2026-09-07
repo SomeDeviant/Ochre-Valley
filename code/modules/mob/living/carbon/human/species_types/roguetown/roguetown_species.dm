@@ -12,7 +12,7 @@
 	left exactly as typed.
 */
 /proc/apply_accent_pipeline(message, autopunct = TRUE, do_trim = TRUE)
-	message = treat_message_accent_fullword(message, strings("accent_universal.json", "universal"))
+	message = treat_message_accent_fullword(message, strings("accent_universal_ov.json", "universal"))
 
 	if(autopunct)
 		message = autopunct_bare(message)
