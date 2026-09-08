@@ -521,6 +521,10 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			listener_atom = listener.get_hearing_atom()
 			if(!listener_atom)
 				listener_atom = AM
+		if(isdullahan(AM))
+			var/mob/living/carbon/human/target = AM
+			var/datum/species/dullahan/target_species = target.dna.species
+			listener_atom = target_species.headless ? target_species.my_head : AM
 		var/turf/listener_turf = get_turf(listener_atom)
 		if(!listener_turf)
 			continue
@@ -558,11 +562,17 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 					for(var/mob/living/MH in viewers(world.view, speaker_ceiling))
 						if(M == MH && MH.z == speaker_ceiling?.z)
 							speaker_obstructed = FALSE
+					for(var/obj/item/bodypart/head/dullahan/DH in range(world.view, speaker_ceiling))
+						if(DH.original_owner && M == DH.original_owner && DH.z == speaker_ceiling?.z)
+							speaker_obstructed = FALSE
 
 				if(!listener_has_ceiling)
 					for(var/mob/living/ML in viewers(world.view, listener_ceiling))
 						if(ML == src && ML.z == listener_ceiling?.z)
 							listener_obstructed = FALSE
+					for(var/obj/item/bodypart/head/dullahan/DH in range(world.view, listener_ceiling))
+						if(DH.original_owner && src == DH.original_owner && DH.z == listener_ceiling?.z)
+							speaker_obstructed = FALSE
 				if(listener_obstructed && speaker_obstructed)
 					continue
 		var/highlighted_message
