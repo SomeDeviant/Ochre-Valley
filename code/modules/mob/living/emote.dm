@@ -85,7 +85,7 @@
 			SEND_SOUND(C, sound('modular_ochrevalley/sounds/misc/gm_prayer.ogg'))
 	// OV Edit End
 
-	follower.whisper(prayer)
+	follower.whisper(prayer, sanitize=FALSE) // we already sanitized this above
 
 	if(SEND_SIGNAL(follower, COMSIG_CARBON_PRAY, prayer) & CARBON_PRAY_CANCEL)
 		return
