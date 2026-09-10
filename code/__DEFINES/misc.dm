@@ -70,7 +70,7 @@
 #define HANDCUFF_LAYER			8
 #define LEGCUFF_LAYER			7
 #define BELLY_LAYER				6.95	//OV ADD - Genital adjustments src. Caustic
-#define BREASTS_LAYER			6.9	//OV ADD - Genital adjustments src. Caustic
+#define BREASTS_LAYER			6.9		//OV ADD - Genital adjustments src. Caustic
 #define BODY_FRONT_LAYER		6
 #define CUSTOM_HAIR_ABOVE_SNOUT_LAYER 5.9	//so hair renders over (top) snouts using BODY_FRONT_LAYER (WHY ARE TOP SNOUTS LIKE THIS I HATE FURRIES)
 #define BODY_FRONT_FRONT_LAYER	5
