@@ -73,7 +73,7 @@
 
 
 /datum/quest/kill/notorious_bounty/get_objective_text()
-	return "Slay the target, but be warned! They are rumored to be a truly formidable opponent!"
+	return "Slay a truly formidable opponent! (Be warned, they may be controlled by a player!)" //OV EDIT
 
 /datum/quest/kill/notorious_bounty/get_additional_reward(turf/origin_turf, turf/target_turf)
 	if(!target_mob_type)
@@ -211,6 +211,7 @@
 	reward_amount += NOTORIOUS_BOUNTY_PLAYER_BONUS
 	quest_scroll?.update_quest_text()
 	announce_to_bearer("<b>[boss_name] has been warned of you.</b> The bounty rises by [NOTORIOUS_BOUNTY_PLAYER_BONUS] mammons.")
+	announce_to_bearer("Your target is controlled by a player, and you must slay them. If you lose, you will be healed. Please make it fun, don't cheese it.") //OV ADD
 	to_chat(boss, span_danger("You are [boss_name]. Someone signed a writ for your head and the hunting party is on its way."))
 	to_chat(boss, span_danger("You cannot leave this ground. Hold out [NOTORIOUS_BOUNTY_CONTROL_TIME / (1 MINUTES)] minutes, or break them, and you are paid [NOTORIOUS_BOUNTY_SURVIVAL_TRIUMPH] TRIUMPH. Hiding pays nothing - they have to come at you and fail."))
 	to_chat(boss, span_boldnotice("Kill them if you must, but do not round-remove them. Follow escalation rules. You may join any fight your gang has already started."))
