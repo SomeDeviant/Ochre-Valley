@@ -48,68 +48,68 @@
 	icon_state = "human"
 	preview_states = list("human_2_1_FRONT_1")
 	name = "Plain"
-	color_key_defaults = list(KEY_CHEST_COLOR, KEY_CHEST_COLOR)
+	color_key_defaults = list(KEY_CHEST_COLOR) //OV EDIT - list(KEY_CHEST_COLOR, KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/penis/knotted
 	icon_state = "knotted"
 	preview_states = list("knotted_2_1_FRONT_1")
 	name = "Knotted"
-	color_key_defaults = list(null, KEY_CHEST_COLOR)
-	default_colors = list("C52828", null)
+	color_key_defaults = list(KEY_CHEST_COLOR) //OV EDIT - list(null, KEY_CHEST_COLOR)
+	default_colors = list("C52828") //OV EDIT - list("C52828", null)
 
 /datum/sprite_accessory/penis/knotted2
 	name = "Knotted 2"
 	icon_state = "knotted2"
 	preview_states = list("knotted2_2_1_FRONT_1")
-	color_key_defaults = list(null, KEY_CHEST_COLOR)
-	default_colors = list("C52828", null)
+	color_key_defaults = list(KEY_CHEST_COLOR) //OV EDIT - list(null, KEY_CHEST_COLOR)
+	default_colors = list("C52828") //OV EDIT - list("C52828", null)
 
 /datum/sprite_accessory/penis/flared
 	icon_state = "flared"
 	preview_states = list("flared_2_1_FRONT_1")
 	name = "Flared"
-	color_key_defaults = list(KEY_CHEST_COLOR, KEY_CHEST_COLOR)
+	color_key_defaults = list(KEY_CHEST_COLOR) //OV EDIT - list(KEY_CHEST_COLOR, KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/penis/barbknot
 	icon_state = "barbknot"
 	preview_states = list("barbknot_2_1_FRONT_1")
 	name = "Barbed, Knotted"
-	color_key_defaults = list(null, KEY_CHEST_COLOR)
-	default_colors = list("C52828", null)
+	color_key_defaults = list(KEY_CHEST_COLOR) //OV EDIT - list(null, KEY_CHEST_COLOR)
+	default_colors = list("C52828") //OV EDIT - list("C52828", null)
 
 /datum/sprite_accessory/penis/tapered
 	icon_state = "tapered"
 	preview_states = list("tapered_2_1_FRONT_1")
 	name = "Tapered"
-	default_colors = list("C52828", "C52828")
+	default_colors = list("C52828") //OV EDIT - list("C52828", "C52828")
 
 /datum/sprite_accessory/penis/tapered_mammal
 	icon_state = "tapered"
 	preview_states = list("tapered_2_1_FRONT_1")
 	name = "Tapered"
-	color_key_defaults = list(null, KEY_CHEST_COLOR)
-	default_colors = list("C52828", null)
+	color_key_defaults = list(KEY_CHEST_COLOR) //OV EDIT - list(null, KEY_CHEST_COLOR)
+	default_colors = list("C52828") //OV EDIT - list("C52828", null)
 
 /datum/sprite_accessory/penis/tentacle
 	icon_state = "tentacle"
 	preview_states = list("tentacle_2_1_FRONT_1")
 	name = "Tentacled"
-	default_colors = list("C52828", "C52828")
+	default_colors = list("C52828") //OV EDIT - list("C52828", "C52828")
 
 /datum/sprite_accessory/penis/hemi
 	icon_state = "hemi"
 	preview_states = list("hemi_2_1_FRONT_1")
 	name = "Hemi"
-	default_colors = list("C52828", "C52828")
+	default_colors = list("C52828") //OV EDIT - list("C52828", "C52828")
 
 /datum/sprite_accessory/penis/hemiknot
 	icon_state = "hemiknot"
 	preview_states = list("hemiknot_2_1_FRONT_1")
 	name = "Knotted Hemi"
-	default_colors = list("C52828", "C52828")
+	default_colors = list("C52828") //OV EDIT - list("C52828", "C52828")
 
 /datum/sprite_accessory/testicles
-	icon = 'icons/mob/sprite_accessory/genitals/gonads.dmi'
+	icon = 'modular_ochrevalley/icons/mob/sprite_accessory/genitals/gonads_cc.dmi' //OV EDIT
 	color_key_name = "Sack"
 	relevant_layers = list(BODY_BEHIND_LAYER, TESTICLES_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replaces BODY_FRONT_LAYER
 
@@ -135,6 +135,14 @@
 	icon_state = "pair"
 	preview_states = list("pair_2_FRONT") //OV EDIT
 	color_key_defaults = list(KEY_SKIN_COLOR)
+
+//OV ADD START
+/datum/sprite_accessory/testicles/sheath
+	name = "Sheath"
+	icon_state = "sheath"
+	preview_states = list("sheath_2_FRONT")
+	color_key_defaults = list(KEY_SKIN_COLOR)
+//OV ADD END
 
 /datum/sprite_accessory/breasts
 	icon = 'icons/mob/sprite_accessory/genitals/breasts.dmi'

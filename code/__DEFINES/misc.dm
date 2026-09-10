@@ -54,8 +54,6 @@
 #define ARMORSLEEVE_LAYER		22
 #define GLOVESLEEVE_LAYER		21
 #define RING_LAYER				20
-#define BELLY_LAYER				19.95	//OV ADD - Genital adjustments src. Caustic
-#define BREASTS_LAYER			19.9	//OV ADD - Genital adjustments src. Caustic
 #define GLASSES_LAYER			19
 #define NECK_LAYER				18
 #define CLOAK_LAYER				17		//only when looking north or west/east
@@ -71,6 +69,8 @@
 #define HANDS_LAYER				9
 #define HANDCUFF_LAYER			8
 #define LEGCUFF_LAYER			7
+#define BELLY_LAYER				6.95	//OV ADD - Genital adjustments src. Caustic
+#define BREASTS_LAYER			6.9	//OV ADD - Genital adjustments src. Caustic
 #define BODY_FRONT_LAYER		6
 #define CUSTOM_HAIR_ABOVE_SNOUT_LAYER 5.9	//so hair renders over (top) snouts using BODY_FRONT_LAYER (WHY ARE TOP SNOUTS LIKE THIS I HATE FURRIES)
 #define BODY_FRONT_FRONT_LAYER	5

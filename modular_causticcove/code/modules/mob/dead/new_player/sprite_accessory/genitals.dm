@@ -19,7 +19,7 @@
 	relevant_layers = list(BODY_BEHIND_LAYER, BELLY_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replace BODY_FRONTER_LAYER
 
 /datum/sprite_accessory/butt
-	icon = 'modular_causticcove/icons/mob/merp_organs/butt.dmi'
+	icon = 'modular_causticcove/icons/mob/merp_organs/buttplainnothigh.dmi' //OV EDIT
 	color_key_name = "Butt"
 	relevant_layers = list(ASS_LAYER, BODY_BEHIND_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replaces BODY_ADJ_LAYER
 
@@ -41,7 +41,7 @@
 	return is_human_part_visible(owner, HIDEJUMPSUIT|HIDEBUTT)
 
 /datum/sprite_accessory/butt/plain
-	name = "Plain"
+	name = "Plain (No Thighs)"
 	icon_state = "pair"
-	preview_states = list("butt_pair_2_FRONT")
+	preview_states = list("butt_pair_2_BEHIND")
 	color_key_defaults = list(KEY_SKIN_COLOR)

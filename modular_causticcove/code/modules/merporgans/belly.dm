@@ -49,6 +49,7 @@ GLOBAL_LIST_INIT(named_belly_sizes, list(
 
 /datum/sprite_accessory/belly/plain
 	icon_state = "pair"
+	preview_states = list("belly_pair_2_FRONT")
 	name = "Plain"
 	color_key_defaults = list(KEY_CHEST_COLOR)
 	relevant_layers = list(BODY_BEHIND_LAYER, BELLY_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replace BODY_FRONTER_LAYER

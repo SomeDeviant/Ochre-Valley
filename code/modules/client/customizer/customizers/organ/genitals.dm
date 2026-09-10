@@ -129,13 +129,25 @@
 /datum/customizer_choice/organ/penis/human
 	name = "Plain Penis"
 	organ_type = /obj/item/organ/penis
-	sprite_accessories = list(/datum/sprite_accessory/penis/human)
+	sprite_accessories = list(
+		/datum/sprite_accessory/penis/human,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/human,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
+		)
 	allows_accessory_color_customization = FALSE
 
 /datum/customizer_choice/organ/penis/human_anthro
 	name = "Plain Penis"
 	organ_type = /obj/item/organ/penis
-	sprite_accessories = list(/datum/sprite_accessory/penis/human)
+	sprite_accessories = list(
+		/datum/sprite_accessory/penis/human,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/human,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
+		)
 	allows_accessory_color_customization = TRUE
 
 /datum/customizer_choice/organ/penis/knotted
@@ -144,6 +156,11 @@
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/knotted,
 		/datum/sprite_accessory/penis/knotted2,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/knotted,
+		/datum/sprite_accessory/penis/hyper/knotted2,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 /datum/customizer_choice/organ/penis/equine
@@ -151,6 +168,10 @@
 	organ_type = /obj/item/organ/penis/equine
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/flared,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/flared,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 /datum/customizer_choice/organ/penis/tapered_mammal
@@ -158,6 +179,10 @@
 	organ_type = /obj/item/organ/penis/tapered_mammal
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/tapered_mammal,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/tapered_mammal,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 /datum/customizer_choice/organ/penis/tapered
@@ -165,6 +190,10 @@
 	organ_type = /obj/item/organ/penis/tapered
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/tapered,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/tapered,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 /datum/customizer_choice/organ/penis/tapered_double
@@ -172,6 +201,10 @@
 	organ_type = /obj/item/organ/penis/tapered_double
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/hemi,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/hemi,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 /datum/customizer_choice/organ/penis/tapered_double_knot
@@ -179,6 +212,10 @@
 	organ_type = /obj/item/organ/penis/tapered_double_knotted
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/hemiknot,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/hemiknot,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 /datum/customizer_choice/organ/penis/barbed
@@ -186,6 +223,10 @@
 	organ_type = /obj/item/organ/penis/barbed
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/barbknot,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/barbknot,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 /datum/customizer_choice/organ/penis/barbed_knotted
@@ -193,6 +234,10 @@
 	organ_type = /obj/item/organ/penis/barbed_knotted
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/barbknot,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/barbknot,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 /datum/customizer_choice/organ/penis/tentacle
@@ -200,6 +245,10 @@
 	organ_type = /obj/item/organ/penis/tentacle
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/tentacle,
+		//OV ADD START
+		/datum/sprite_accessory/penis/hyper/tentacle,
+		/datum/sprite_accessory/penis/hyper/nondescript,
+		//OV ADD END
 		)
 
 //OV edit
@@ -317,11 +366,21 @@
 
 /datum/customizer_choice/organ/testicles/external
 	name = "Testicles"
-	sprite_accessories = list(/datum/sprite_accessory/testicles/pair)
+	sprite_accessories = list(
+		/datum/sprite_accessory/testicles/pair,
+		//OV ADD START
+		/datum/sprite_accessory/testicles/sheath,
+		//OV ADD END
+		)
 
 /datum/customizer_choice/organ/testicles/human
 	name = "Testicles"
-	sprite_accessories = list(/datum/sprite_accessory/testicles/pair)
+	sprite_accessories = list(
+		/datum/sprite_accessory/testicles/pair,
+		//OV ADD START
+		/datum/sprite_accessory/testicles/sheath,
+		//OV ADD END
+		)
 	allows_accessory_color_customization = FALSE
 
 /datum/customizer_choice/organ/testicles/internal
@@ -430,7 +489,12 @@
 	customizer_choices = list(/datum/customizer_choice/organ/breasts/human)
 
 /datum/customizer_choice/organ/breasts/human
-	sprite_accessories = list(/datum/sprite_accessory/breasts/pair)
+	sprite_accessories = list(
+		/datum/sprite_accessory/breasts/pair,
+		//OV ADD START
+		/datum/sprite_accessory/breasts/hyper/pair,
+		//OV ADD END
+		)
 	allows_accessory_color_customization = FALSE
 
 /datum/customizer/organ/breasts/animal
@@ -441,6 +505,11 @@
 		/datum/sprite_accessory/breasts/pair,
 		/datum/sprite_accessory/breasts/quad,
 		/datum/sprite_accessory/breasts/sextuple,
+		//OV ADD START
+		/datum/sprite_accessory/breasts/hyper/pair,
+		/datum/sprite_accessory/breasts/hyper/quad,
+		/datum/sprite_accessory/breasts/hyper/sextuple,
+		//OV ADD END
 		)
 
 //OV edit

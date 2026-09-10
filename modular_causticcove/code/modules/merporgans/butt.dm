@@ -26,12 +26,15 @@ GLOBAL_LIST_INIT(named_butt_sizes, list(
 	"small" = 1,
 	"medium" = 2,
 	"large" = 3,
-	"massive" = 4,
-	"enormous" = 5,
+	"extra-large" = 4,
+	"massive" = 5,
+	"enormous" = 6,
+	"gigantic" = 7,
+	"gargantuan" = 8,
 ))
 
 /datum/sprite_accessory/butt
-	icon = 'modular_causticcove/icons/mob/merp_organs/butt.dmi'
+	icon = 'modular_causticcove/icons/mob/merp_organs/buttplainnothigh.dmi' //OV EDIT
 	color_key_name = "Butt"
 	relevant_layers = list(ASS_LAYER, BODY_BEHIND_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replaces BODY_ADJ_LAYER
 
@@ -53,7 +56,7 @@ GLOBAL_LIST_INIT(named_butt_sizes, list(
 	return is_human_part_visible(owner, HIDEJUMPSUIT|HIDEBUTT)
 
 /datum/sprite_accessory/butt/plain
-	name = "Plain"
+	name = "Plain (No Thighs)"
 	icon_state = "pair"
-	preview_states = list("butt_pair_2_FRONT")
+	preview_states = list("butt_pair_2_BEHIND")
 	color_key_defaults = list(KEY_SKIN_COLOR)
