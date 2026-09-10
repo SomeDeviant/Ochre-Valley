@@ -51,4 +51,4 @@ GLOBAL_LIST_INIT(named_belly_sizes, list(
 	icon_state = "pair"
 	name = "Plain"
 	color_key_defaults = list(KEY_CHEST_COLOR)
-	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONTER_LAYER)
+	relevant_layers = list(BODY_BEHIND_LAYER, BELLY_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replace BODY_FRONTER_LAYER

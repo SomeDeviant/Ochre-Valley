@@ -3,7 +3,7 @@
 	color_keys = 2
 	color_key_names = list("Member", "Skin")
 //Caustic Edit, adds dynamic state changes
-	relevant_layers = list(/*BODY_BEHIND_LAYER,*/ BODY_FRONT_LAYER) //Vrell - Yes I know this is hacky but it works for now
+	relevant_layers = list(/*BODY_BEHIND_LAYER,*/ CROTCH_LAYER) //Vrell - Yes I know this is hacky but it works for now //OV EDIT - Genital adjustments src. Caustic replaced BODY_FRONT_LAYER
 
 /datum/sprite_accessory/penis/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_BELT, OFFSET_BELT_F)
@@ -111,7 +111,7 @@
 /datum/sprite_accessory/testicles
 	icon = 'icons/mob/sprite_accessory/genitals/gonads.dmi'
 	color_key_name = "Sack"
-	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER) //OV EDIT
+	relevant_layers = list(BODY_BEHIND_LAYER, TESTICLES_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replaces BODY_FRONT_LAYER
 
 /datum/sprite_accessory/testicles/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_BELT, OFFSET_BELT_F)
@@ -133,14 +133,14 @@
 /datum/sprite_accessory/testicles/pair
 	name = "Pair"
 	icon_state = "pair"
-	preview_states = list("pair_2_ADJ")
+	preview_states = list("pair_2_FRONT") //OV EDIT
 	color_key_defaults = list(KEY_SKIN_COLOR)
 
 /datum/sprite_accessory/breasts
 	icon = 'icons/mob/sprite_accessory/genitals/breasts.dmi'
 	color_key_name = "Breasts"
 	//Caustic Edit, our chests run off different layers than default
-	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONTEST_LAYER)
+	relevant_layers = list(BODY_BEHIND_LAYER, BREASTS_LAYER) //OV EDIT - Genitals adjustments src. Caustic - Replace BODY_FRONTEST_LAYER
 	//Caustic Edit end
 
 /datum/sprite_accessory/breasts/get_icon_state(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
@@ -176,7 +176,7 @@
 /datum/sprite_accessory/vagina
 	icon = 'icons/mob/sprite_accessory/genitals/nethers.dmi'
 	color_key_name = "Nethers"
-	relevant_layers = list(BODY_FRONT_LAYER)
+	relevant_layers = list(CROTCH_LAYER) //OV EDIT - Genital adjustments src. Caustic - Replace BODY_FRONT_LAYER
 
 /datum/sprite_accessory/vagina/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_BELT, OFFSET_BELT_F)

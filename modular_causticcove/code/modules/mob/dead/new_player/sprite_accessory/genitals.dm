@@ -16,12 +16,12 @@
 	icon_state = "pair"
 	name = "Plain"
 	color_key_defaults = list(KEY_CHEST_COLOR)
-	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONTER_LAYER)
+	relevant_layers = list(BODY_BEHIND_LAYER, BELLY_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replace BODY_FRONTER_LAYER
 
 /datum/sprite_accessory/butt
 	icon = 'modular_causticcove/icons/mob/merp_organs/butt.dmi'
 	color_key_name = "Butt"
-	relevant_layers = list(BODY_ADJ_LAYER)
+	relevant_layers = list(ASS_LAYER, BODY_BEHIND_LAYER) //OV EDIT - Genitals Adjustments src. Caustic - Replaces BODY_ADJ_LAYER
 
 /datum/sprite_accessory/butt/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	if(!isdwarf(owner) && !isgoblinp(owner) && !iskobold(owner) && !isvermin(owner))
@@ -43,4 +43,5 @@
 /datum/sprite_accessory/butt/plain
 	name = "Plain"
 	icon_state = "pair"
+	preview_states = list("butt_pair_2_FRONT")
 	color_key_defaults = list(KEY_SKIN_COLOR)

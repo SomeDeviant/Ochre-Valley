@@ -214,12 +214,20 @@
 			return "ADJ"
 		if(BODY_FRONT_LAYER)
 			return "FRONT"
-		//Caustic Edit
-		if(BODY_FRONTER_LAYER)
+		//Caustic Edit //OV EDIT - Genital layering adjustments src. Caustic
+		if(ASS_LAYER) //Actually, running with this 'front' for all of them means we can just freely adjust the layers on the fly during runtime... Might be hacky but it might work?
+			return "FRONT" //Okay this might need a different one but, guh. So that it can properly have alternates for the 'always shown' option.
+		if(TESTICLES_LAYER)
 			return "FRONT"
-		if(BODY_FRONTEST_LAYER)
+		if(BELLY_LAYER)
 			return "FRONT"
-		//Caustic End
+		if(BREASTS_LAYER)
+			return "FRONT"
+		if(CROTCH_LAYER)
+			return "FRONT"
+		if(GLASSES_LAYER)
+			return "ADJ"
+		//Caustic End //OV EDIT - Genital layering adjustments src. Caustic
 		if(BODY_FRONT_FRONT_LAYER)
 			return "FFRONT"
 		if(BODY_UNDER_LAYER)
