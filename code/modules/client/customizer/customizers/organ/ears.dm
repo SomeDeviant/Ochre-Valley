@@ -166,6 +166,7 @@
 		/datum/sprite_accessory/ears/lynx,
 		/datum/sprite_accessory/ears/zorzor,
 		/datum/sprite_accessory/ears/naja_hood,
+		/datum/sprite_accessory/ears/ochre/shadekin,
 		/datum/sprite_accessory/ears/big/caustic/bunny_large,
 		/datum/sprite_accessory/ears/big/ochre/bunny_tall,
 		/datum/sprite_accessory/ears/big/ochre/shadekin_round,
@@ -281,6 +282,7 @@
 		/datum/sprite_accessory/ears/big/caustic/bunny_large,
 		//CC End
 		//OV Add Start
+		/datum/sprite_accessory/ears/ochre/shadekin,
 		/datum/sprite_accessory/ears/big/ochre/bunny_tall,
 		/datum/sprite_accessory/ears/big/ochre/shadekin_round,
 		/datum/sprite_accessory/ears/big/ochre/feather_horns,
@@ -370,6 +372,7 @@
 		/datum/sprite_accessory/ears/big/caustic/bunny_large,
 		//CC End
 		//OV Add Start
+		/datum/sprite_accessory/ears/ochre/shadekin,
 		/datum/sprite_accessory/ears/big/ochre/bunny_tall,
 		/datum/sprite_accessory/ears/big/ochre/shadekin_round,
 		/datum/sprite_accessory/ears/big/ochre/feather_horns,
@@ -476,6 +479,7 @@
 		/datum/sprite_accessory/ears/big/sandfox_large,
 		/datum/sprite_accessory/ears/lynx,
 		//OV Add Start
+		/datum/sprite_accessory/ears/ochre/shadekin,
 		/datum/sprite_accessory/ears/big/ochre/bunny_tall,
 		/datum/sprite_accessory/ears/big/ochre/shadekin_round,
 		/datum/sprite_accessory/ears/big/ochre/feather_horns,
@@ -557,6 +561,7 @@
 		/datum/sprite_accessory/ears/naja_hood,
 		/datum/sprite_accessory/ears/wispy,
 		/datum/sprite_accessory/ears/small,
+		/datum/sprite_accessory/ears/ochre/shadekin,
 		/datum/sprite_accessory/ears/big/caustic/bunny_large,
 		/datum/sprite_accessory/ears/big/ochre/bunny_tall,
 		/datum/sprite_accessory/ears/big/ochre/shadekin_round,

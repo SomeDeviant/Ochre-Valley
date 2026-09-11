@@ -529,6 +529,10 @@
 				message_param = "kisses %t on the brow."
 			else if(H.zone_selected == BODY_ZONE_PRECISE_SKULL)
 				message_param = "kisses %t on the forehead."
+			//OV EDIT
+			else if(H.zone_selected == BODY_ZONE_PRECISE_STOMACH)
+				message_param = "kisses %t on their belly."
+			//OV EDIT END
 			else
 				message_param = "kisses %t on \the [parse_zone(H.zone_selected)]."
 	playsound(target.loc, pick('sound/vo/kiss (1).ogg','sound/vo/kiss (2).ogg'), 100, FALSE, -1)
