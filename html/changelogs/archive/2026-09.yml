@@ -536,10 +536,33 @@
         as intended.
     - rscadd: You can now light another character's cigarette while kissing them.
     - qol: Removed the redundant dram count description from vessels.
+    - rscadd: Added shoutbubble() for prominent shouted emotes.
+    - rscadd: Added shout bubbles to painscream, warcry, agony, and firescream.
+    - code_imp: warcry now records STATS_WARCRIES.
   Ryan180602:
     - balance: jester's floor of music skill is expert
   WeNeedMorePhoron:
     - balance: Dash like effects lock eachother out for 30 seconds
+    - rscadd:
+        Ported Container Cooking system from Vanderlin. Pan, Pot and Oven are
+        now real containers and can contain multiple items that can be cooked at once!
+    - rscadd:
+        Left click a hearth with a pan on to remove an empty pan and middle click
+        let you always remove any container. Left click with a loaded pan to remove
+        items one by one. Use it on itself (Press Q in left hand / E in right hand)
+        will now FLIP the content into the tile, or a tray in front of you, if you have
+        Journeyman cooking or above
+    - rscadd:
+        Tray now can pick up food and utensils en masse and slide them in and
+        out of oven.
+    - rscadd:
+        Baker's Peel is now a one-handable, two hands needed to use tray that
+        have a capacity of 6
+    - rscadd: Pot must be hot before you can boil a stew in it.
+    - rscadd:
+        Migrated hearth fanning to work with the new system and add a flat number
+        of cooking progress to item on the stove.
+    - rscadd: Boiling and Deep Fried recipes eject output, while stew stays in stew.
   changelingonberry:
     - admin:
         increases the window size of  he actors manifest, VV, player panel and
@@ -796,10 +819,6 @@
     - qol:
         made the advanced spellbook sprites require novice arcane magic skill, instead
         of expert.
-  Quinalion:
-    - rscadd: Added shoutbubble() for prominent shouted emotes.
-    - rscadd: Added shout bubbles to painscream, warcry, agony, and firescream.
-    - code_imp: warcry now records STATS_WARCRIES.
   Rando001:
     - rscadd: Ravenous vice, a more tame version of Bottomless
     - qol:
@@ -1415,27 +1434,6 @@
     - bugfix: fixed a line of code that looked for a string that did not exist
   Vorrarkul:
     - rscadd: Saddleborn drow can now select drider mounts
-  WeNeedMorePhoron:
-    - rscadd:
-        Ported Container Cooking system from Vanderlin. Pan, Pot and Oven are
-        now real containers and can contain multiple items that can be cooked at once!
-    - rscadd:
-        Left click a hearth with a pan on to remove an empty pan and middle click
-        let you always remove any container. Left click with a loaded pan to remove
-        items one by one. Use it on itself (Press Q in left hand / E in right hand)
-        will now FLIP the content into the tile, or a tray in front of you, if you have
-        Journeyman cooking or above
-    - rscadd:
-        Tray now can pick up food and utensils en masse and slide them in and
-        out of oven.
-    - rscadd:
-        Baker's Peel is now a one-handable, two hands needed to use tray that
-        have a capacity of 6
-    - rscadd: Pot must be hot before you can boil a stew in it.
-    - rscadd:
-        Migrated hearth fanning to work with the new system and add a flat number
-        of cooking progress to item on the stove.
-    - rscadd: Boiling and Deep Fried recipes eject output, while stew stays in stew.
   bearrrrrrrr:
     - rscadd: Baotha miracles mini rework
   granodd:
