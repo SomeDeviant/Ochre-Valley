@@ -9,7 +9,7 @@
 	allowed_ages = ALL_AGES_LIST
 	allowed_patrons = list(/datum/patron/divine/abyssor)
 	virtue_restrictions = list(/datum/virtue/utility/noble)
-	forbidden_races = list(RACES_DESPISED)
+	//forbidden_races = list(RACES_DESPISED) //OV EDIT - Races allowed
 	outfit = /datum/outfit/job/roguetown/monk
 	display_order = JDO_PAINTER
 	give_bank_account = TRUE

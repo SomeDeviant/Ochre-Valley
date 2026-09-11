@@ -8,7 +8,7 @@
 	spawn_positions = 2
 	allowed_ages = ALL_AGES_LIST
 	allowed_patrons = list(/datum/patron/divine/pestra)
-	forbidden_races = list(RACES_DESPISED)
+	//forbidden_races = list(RACES_DESPISED) //OV EDIT - Races allowed
 	outfit = /datum/outfit/job/roguetown/keeper
 	display_order = JDO_KEEPER
 	give_bank_account = TRUE
