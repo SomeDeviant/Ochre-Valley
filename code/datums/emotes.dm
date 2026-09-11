@@ -96,12 +96,10 @@
 		if(mobsadjacent.len)
 			chosenmob = input(user, "[key] who?") in mobsadjacent
 		if(chosenmob)
-			if(target_origin.Adjacent(chosenmob)) //OV Edit
+			if(target_origin.Adjacent(chosenmob) || targetrange > 2) //OV Edit
 				params = chosenmob.name
 				adjacentaction(user, chosenmob)
-			else if(targetrange > 2) //if it's a ranged targeted emote
-				params = chosenmob.name
-				adjacentaction(user, chosenmob)
+
 	var/raw_msg = select_message_type(user, intentional)
 	var/msg = raw_msg
 	if(params && message_param)
@@ -190,7 +188,8 @@
 			msg = "[styled_name] [msg]"
 		var/runechat_msg_to_use = null
 		if(show_runechat)
-			runechat_msg_to_use = runechat_msg ? runechat_msg : pre_color_msg
+			runechat_msg_to_use = (runechat_msg && !use_params_for_runechat) ? runechat_msg : pre_color_msg
+
 		if(emote_type == EMOTE_AUDIBLE)
 			emotelocation.audible_message(msg, runechat_message = runechat_msg_to_use, log_seen = SEEN_LOG_EMOTE, hearing_distance = (quiet ? 1 : DEFAULT_MESSAGE_RANGE))
 		else

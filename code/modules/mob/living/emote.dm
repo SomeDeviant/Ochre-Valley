@@ -517,6 +517,13 @@
 		if(do_change)
 			if(H.zone_selected == BODY_ZONE_PRECISE_MOUTH)
 				message_param = "kisses %t deeply."
+				var/obj/item/clothing/mask/cigarette/user_cig = H.get_item_by_slot(SLOT_MOUTH)
+				var/obj/item/clothing/mask/cigarette/target_cig = target.get_item_by_slot(SLOT_MOUTH)
+				if(istype(user_cig) && istype(target_cig))
+					if(user_cig.lit && !target_cig.lit)
+						target_cig.light(span_notice("[H] smoothly lights [target]'s [target_cig.name] with [H.p_their()] own during the kiss."))
+					else if(!user_cig.lit && target_cig.lit)
+						user_cig.light(span_notice("[H] smoothly lights [H.p_their()] [user_cig.name] from [target]'s own during the kiss."))
 			else if(H.zone_selected == BODY_ZONE_PRECISE_EARS)
 				message_param = "kisses %t on the ear."
 				if(!HAS_TRAIT(target, TRAIT_DECEIVING_MEEKNESS) && !HAS_TRAIT(target, TRAIT_NOMOOD))
@@ -529,6 +536,8 @@
 				message_param = "kisses %t on the brow."
 			else if(H.zone_selected == BODY_ZONE_PRECISE_SKULL)
 				message_param = "kisses %t on the forehead."
+			else if(H.zone_selected == BODY_ZONE_HEAD)
+				message_param = "kisses %t on the cheek."
 			//OV EDIT
 			else if(H.zone_selected == BODY_ZONE_PRECISE_STOMACH)
 				message_param = "kisses %t on their belly."
@@ -586,7 +595,7 @@
 				message_param = "licks %t between the legs."
 				to_chat(target, span_love("That feels nice..."))
 			else if(J.zone_selected == BODY_ZONE_HEAD)
-				message_param = "licks %t cheek"
+				message_param = "licks %t cheek."
 			else
 				message_param = "licks %t [parse_zone(J.zone_selected)]."
 	playsound(target.loc, pick("sound/vo/lick.ogg"), 100, FALSE, -1)
