@@ -37,9 +37,10 @@
 #define LEGSLEEVE_LAYER			36
 #define SHOES_LAYER				35
 #define SHOESLEEVE_LAYER		34
-#define ASS_LAYER				33.75	//OV ADD - Genital adjustments src. Caustic
-#define TESTICLES_LAYER			33.5	//OV ADD - Genital adjustments src. Caustic
-#define CROTCH_LAYER			33.25	//OV ADD - Genital adjustments src. Caustic
+#define TAURFEATURE_LAYER		33.8	//OV ADD - Genital adjustments src. Caustic
+#define ASS_LAYER				33.6	//OV ADD - Genital adjustments src. Caustic
+#define TESTICLES_LAYER			33.4	//OV ADD - Genital adjustments src. Caustic
+#define CROTCH_LAYER			33.2	//OV ADD - Genital adjustments src. Caustic
 #define SHIRT_LAYER				33
 #define WRISTS_LAYER			32
 #define ARMOR_LAYER				31

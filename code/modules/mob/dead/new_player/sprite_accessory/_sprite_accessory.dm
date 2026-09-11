@@ -225,6 +225,8 @@
 			return "FRONT"
 		if(CROTCH_LAYER)
 			return "FRONT"
+		if(TAURFEATURE_LAYER)
+			return "FRONT"
 		if(GLASSES_LAYER)
 			return "ADJ"
 		//Caustic End //OV EDIT - Genital layering adjustments src. Caustic
