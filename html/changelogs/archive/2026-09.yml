@@ -1479,3 +1479,24 @@
         Throw vore are enabled
   zydras:
     - rscadd: Added donator items for 1ceres and DerBlitzkrieg
+2026-09-12:
+  BurpleBineapple:
+    - rscadd: Added a rare FOR based easter egg to weapon flourishing.
+  Dorodomki:
+    - rscadd: "Added new donator item for lief
+
+        :cl:"
+  KatTheFox:
+    - bugfix:
+        Elemental familiars no longer qdel themselves if you abandon them for
+        too long. You monster.
+    - bugfix:
+        Void drakelings being dismissed via the free familiar ritual will now
+        refund the resources used to summon them.
+    - bugfix: Revenant heads can now be properly panelled
+  borneblood:
+    - bugfix: Fixed more things with Rekindled Exchange
+  plsleavemealon:
+    - rscadd: Ports a hat and cape sprite from vanderlin
+  voidwytch:
+    - rscadd: Added TEN new sets of clothes, acquirable at the Tailor only
