@@ -19,7 +19,7 @@
 
 	base_antags = 2
 	maximum_antags = 2
-	min_players = 40
+	min_players = 15 // OV EDIT - Was 40
 
 	earliest_start = 0 SECONDS
 

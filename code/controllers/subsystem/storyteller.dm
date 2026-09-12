@@ -12,7 +12,7 @@
 /// A half combatant (acolyte) counts as 1 + this value towards effective population
 #define HALF_COMBATANT_ADDITIONAL_WEIGHT 1
 
-#define ROUND_MIN_POP_TRIGGER 40
+#define ROUND_MIN_POP_TRIGGER 15 //OV EDIT - Was 40
 
 /// The gamemode preset datum governing this round (the roundstart pick, or the pending pick pre-round).
 /proc/active_preset()
