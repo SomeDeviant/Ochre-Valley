@@ -15,7 +15,7 @@
 	min_pq = 10 //OV EDIT
 	max_pq = null
 
-	obsfuscated_job = TRUE
+	obfuscated_job = TRUE
 	class_categories = TRUE
 
 	advclass_cat_rolls = list(CTAG_WRETCH = 20)
