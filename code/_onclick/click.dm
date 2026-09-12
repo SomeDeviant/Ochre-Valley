@@ -466,11 +466,11 @@
 		return FALSE
 	if(offhand.wlength >= WLENGTH_GREAT)
 		return FALSE
-	if(mainhand.associated_skill)
-		if(get_skill_level(mainhand.associated_skill) < SKILL_LEVEL_JOURNEYMAN)
+	if(mainhand.has_wskill())
+		if(get_wskill(mainhand) < SKILL_LEVEL_JOURNEYMAN)
 			return FALSE
-	if(offhand.associated_skill)
-		if(get_skill_level(offhand.associated_skill) < SKILL_LEVEL_JOURNEYMAN)
+	if(offhand.has_wskill())
+		if(get_wskill(offhand) < SKILL_LEVEL_JOURNEYMAN)
 			return FALSE
 	if(mainhand.force <= 9 || offhand.force <= 9) // should prevent things that have tiny damage from being used, those are often tools anyway.
 		return FALSE
@@ -1048,14 +1048,6 @@ GLOBAL_LIST_EMPTY(reach_dummy_pool)
 
 /mob/dead/observer/MouseWheelOn(atom/A, delta_x, delta_y, params)
 	return
-/*	var/list/modifier = params2list(params)
-	if(modifier["shift"])
-		var/view = 0
-		if(delta_y > 0)
-			view = -1
-		else
-			view = 1
-		add_view_range(view)*/
 
 /mob/proc/check_click_intercept(params,A)
 	//Client level intercept
