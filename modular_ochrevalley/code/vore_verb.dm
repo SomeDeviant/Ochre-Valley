@@ -341,7 +341,7 @@
 	if(!isturf(loc))
 		to_chat(src,span_warning("You need to be on the open ground to do that."))
 		return
-	
+
 	var/list/potential_targets = list()
 
 	for(var/mob/living/L in view(1))
@@ -352,7 +352,7 @@
 		if(!vore_pref_compat(src,L))
 			continue
 		potential_targets |= L
-	
+
 	for(var/thing in contents)
 		if(!istype(thing,/obj/item/holder/micro))	//U can also eat players in your hand
 			continue
@@ -361,13 +361,13 @@
 			continue
 		if(!vore_pref_compat(src,M.held_mob))
 			continue
-	
+
 		potential_targets |= M.held_mob
-		
+
 	if(potential_targets.len <= 0)
 		to_chat(src, span_warning("There are no valid targets in range."))
 		return
-	
+
 	var/mob/living/choice = tgui_input_list(src,"Who would you like to eat?","Vore Target",potential_targets)
 
 	if(!choice)
@@ -387,8 +387,33 @@
 
 	if(!prey.devourable)
 		return FALSE
-	
+
 	return TRUE
+
+/mob/living/carbon/verb/reveal_bodypart()
+	set name = "Reveal Bodypart"
+	set desc = "Toggles between always showing or hiding your chosen bodypart, regardless of clothing worn."
+	set category = "Vore.Misc"
+
+	var/list/choices = list("Belly (Medium or Lower)")
+	var/chosen = tgui_input_list(src, "Reveal what part?", "Only Works At Certain Sizes", choices)
+	if(!chosen)
+		return
+
+	switch(chosen)
+		if("Belly (Medium or Lower)")
+			var/obj/item/organ/belly/tum = src.internal_organs_slot[ORGAN_SLOT_BELLY]
+			if(tum)
+				if(tum.belly_size < 3)
+					tum.always_show = !tum.always_show
+					to_chat(src, span_notice("You are now [tum.always_show ? "revealing" : "hiding"] your belly."))
+					src.update_body_parts(TRUE)
+				else
+					to_chat(src, span_notice("Your belly is too large to display publically."))
+				return
+			else
+				to_chat(src, span_notice("You don't have a belly!"))
+			return
 
 /mob/living/verb/petrification()
 	set name = "Petrification"
