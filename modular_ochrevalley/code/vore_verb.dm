@@ -234,7 +234,7 @@
 	var/green = hex2num(copytext(render_color, 4, 6)) / 255
 	var/blue = hex2num(copytext(render_color, 6, 8)) / 255
 	if(!isnum(red) || !isnum(green) || !isnum(blue))
-		return color_matrix_identity()
+		return COLOR_MATRIX_IDENTITY
 	return list(
 		LUMA_R * red, LUMA_R * green, LUMA_R * blue, 0,
 		LUMA_G * red, LUMA_G * green, LUMA_G * blue, 0,
